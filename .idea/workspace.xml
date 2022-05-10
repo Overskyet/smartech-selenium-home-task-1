@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Actions added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherMainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="PageObjects initialized">
+      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +46,28 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="SampleTest" type="TestNG">
+      <module name="smartech-selenium-home-task-1" />
+      <shortenClasspath name="NONE" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SampleTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652221991020</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="PageObjects initialized">
+      <created>1652222798694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652222798694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +130,7 @@
     <MESSAGE value="Init commit" />
     <MESSAGE value="Logging added" />
     <MESSAGE value="Actions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actions added" />
+    <MESSAGE value="PageObjects initialized" />
+    <option name="LAST_COMMIT_MESSAGE" value="PageObjects initialized" />
   </component>
 </project>
