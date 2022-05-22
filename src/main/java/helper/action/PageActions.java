@@ -1,11 +1,9 @@
 package helper.action;
 
 import helper.condition.ElementPresence;
-import net.bytebuddy.implementation.bind.annotation.Default;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -51,6 +49,10 @@ public class PageActions {
 
     public String getTitle() {
         return driver.getTitle();
+    }
+
+    public String getUrl() {
+        return driver.getCurrentUrl();
     }
 
     public void waitFor(By element, long seconds) {
