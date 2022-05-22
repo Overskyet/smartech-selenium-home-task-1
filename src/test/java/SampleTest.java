@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import page.avtodispetcher.AvtodispetcherMainPage;
 import page.avtodispetcher.AvtodispetcherResultPage;
@@ -10,6 +11,8 @@ public class SampleTest extends BaseTest {
     public void sampleFirstTestScenario() {
         YandexSearchPage searchPage = new YandexSearchPage(driver);
         searchPage.visit("https://yandex.ru/");
+        By elem = By.xpath(".//div[contains(concat(' ', normalize-space(@class), ' '), ' home-logo__default ')]");
+        searchPage.hightlightElement(elem, 5L);
 
         YandexResultPage resultPage = new YandexResultPage(driver);
         resultPage.visit("https://yandex.ru/search/?lr=15&oprnd=9585134529&text=dfds");

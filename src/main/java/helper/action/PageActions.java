@@ -1,6 +1,7 @@
 package helper.action;
 
 import helper.condition.ElementPresence;
+import helper.page.Highlighter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -57,6 +58,10 @@ public class PageActions {
 
     public void waitFor(By element, long seconds) {
         new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
+    }
+
+    public void hightlightElement(By element, Long duration) {
+        new Highlighter(driver).highlightElement(find(element), duration);
     }
 
 }

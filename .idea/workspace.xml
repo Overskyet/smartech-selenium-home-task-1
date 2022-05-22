@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="BaseTest class added&#10;Sample test scenarios added">
-      <change afterPath="$PROJECT_DIR$/object_repo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/page/Highlighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/page/Screenshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/Wait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652225476090</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring">
+      <created>1653181979032</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653181979032</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +150,7 @@
     <MESSAGE value="Actions added" />
     <MESSAGE value="PageObjects initialized" />
     <MESSAGE value="BaseTest class added&#10;Sample test scenarios added" />
-    <option name="LAST_COMMIT_MESSAGE" value="BaseTest class added&#10;Sample test scenarios added" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
