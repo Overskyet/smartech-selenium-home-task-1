@@ -33,32 +33,32 @@ public class ObjectRepository {
     private By findLocator (String locatorName)
     {
         String locatorProperty = objectRepository.getProperty(locatorName);
-        String locatorType = locatorProperty.split(":")[0];
-        String locatorValue = locatorProperty.split(":")[1];
+        String locatorType = locatorProperty.split(";")[0];
+        String locatorValue = locatorProperty.split(";")[1];
 
         By locator = null;
 
         switch(locatorType)
         {
-            case "Id":
+            case "id":
                 locator = By.id(locatorValue);
                 break;
-            case "Name":
+            case "name":
                 locator = By.name(locatorValue);
                 break;
-            case "CssSelector":
+            case "cssSelector":
                 locator = By.cssSelector(locatorValue);
                 break;
-            case "LinkText":
+            case "linkText":
                 locator = By.linkText(locatorValue);
                 break;
-            case "PartialLinkText":
+            case "partialLinkText":
                 locator = By.partialLinkText(locatorValue);
                 break;
-            case "TagName":
+            case "tagName":
                 locator = By.tagName(locatorValue);
                 break;
-            case "Xpath":
+            case "xpath":
                 locator = By.xpath(locatorValue);
                 break;
         }
