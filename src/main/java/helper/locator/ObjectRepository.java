@@ -1,5 +1,7 @@
 package helper.locator;
 
+import org.openqa.selenium.By;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,7 +15,7 @@ public class ObjectRepository {
         setupObjectRepository(fileName);
     }
 
-    public String getLocator (String locatorName) {
+    public By getLocator (String locatorName) {
         return findLocator(locatorName);
     }
 
@@ -28,7 +30,40 @@ public class ObjectRepository {
         }
     }
 
-    private String findLocator (String locatorName) {
-        return objectRepository.getProperty(locatorName);
+    private By findLocator (String locatorName)
+    {
+        String locatorProperty = objectRepository.getProperty(locatorName);
+        String locatorType = locatorProperty.split(":")[0];
+        String locatorValue = locatorProperty.split(":")[1];
+
+        By locator = null;
+
+        switch(locatorType)
+        {
+            case "Id":
+                locator = By.id(locatorValue);
+                break;
+            case "Name":
+                locator = By.name(locatorValue);
+                break;
+            case "CssSelector":
+                locator = By.cssSelector(locatorValue);
+                break;
+            case "LinkText":
+                locator = By.linkText(locatorValue);
+                break;
+            case "PartialLinkText":
+                locator = By.partialLinkText(locatorValue);
+                break;
+            case "TagName":
+                locator = By.tagName(locatorValue);
+                break;
+            case "Xpath":
+                locator = By.xpath(locatorValue);
+                break;
+        }
+        return locator;
     }
+
+
 }

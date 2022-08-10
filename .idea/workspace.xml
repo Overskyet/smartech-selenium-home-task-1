@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/page/Highlighter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/page/Screenshot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/Wait.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="New helper methods added">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653181979032</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="New helper methods added">
+      <created>1653185913886</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653185913886</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +155,7 @@
     <MESSAGE value="PageObjects initialized" />
     <MESSAGE value="BaseTest class added&#10;Sample test scenarios added" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="New helper methods added" />
+    <option name="LAST_COMMIT_MESSAGE" value="New helper methods added" />
   </component>
 </project>
