@@ -9,7 +9,7 @@ public class YandexSearchPage extends PageActions {
 
     private final ObjectRepository objRepo = new ObjectRepository("object_repo.properties");
 
-    private final String baseUrl = objRepo.getBasicUrl("yandex.searchPage.basicUrl");
+    private final String baseUrl = objRepo.getBasicUrl("yandex.searchPage.baseUrl");
 
     private final By homeLogo = objRepo.getLocator("yandex.searchPage.homeLogo.xpath");
 
