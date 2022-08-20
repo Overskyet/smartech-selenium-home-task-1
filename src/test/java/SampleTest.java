@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import page.avtodispetcher.AvtodispetcherMainPage;
 import page.avtodispetcher.AvtodispetcherResultPage;
@@ -10,7 +9,7 @@ public class SampleTest extends BaseTest {
     @Test
     public void sampleFirstTestScenario() {
         YandexSearchPage searchPage = new YandexSearchPage(driver);
-        searchPage.visit("https://yandex.ru/");
+        searchPage.visit(searchPage.getBaseUrl());
         searchPage.hightlightElement(searchPage.getHomeLogo(), 5L);
 
         YandexResultPage resultPage = new YandexResultPage(driver);

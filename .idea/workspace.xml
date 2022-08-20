@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Object Repository class updated">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Locator for YandexSearchPage added">
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/object_repo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/object_repo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
     </list>
@@ -149,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660170639318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Locator for YandexSearchPage added">
+      <created>1660262006744</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660262006744</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +182,7 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="New helper methods added" />
     <MESSAGE value="Object Repository class updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Object Repository class updated" />
+    <MESSAGE value="Locator for YandexSearchPage added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Locator for YandexSearchPage added" />
   </component>
 </project>

@@ -11,15 +11,19 @@ public class ObjectRepository {
 
     private Properties objectRepository;
 
-    public ObjectRepository (String fileName) {
+    public ObjectRepository(String fileName) {
         setupObjectRepository(fileName);
     }
 
-    public By getLocator (String locatorName) {
+    public By getLocator(String locatorName) {
         return findLocator(locatorName);
     }
 
-    private void setupObjectRepository (String fileName) {
+    public String getBasicUrl(String urlName) {
+        return findBasicUrl(urlName);
+    }
+
+    private void setupObjectRepository(String fileName) {
         File file = new File(fileName);
         objectRepository = new Properties();
         try {
@@ -30,9 +34,9 @@ public class ObjectRepository {
         }
     }
 
-    private By findLocator (String locatorName)
+    private By findLocator(String locatorName)
     {
-        String locatorProperty = objectRepository.getProperty(locatorName);
+        String locatorProperty = getProperty(locatorName);
         String locatorType = locatorProperty.split(";")[0];
         String locatorValue = locatorProperty.split(";")[1];
 
@@ -63,6 +67,14 @@ public class ObjectRepository {
                 break;
         }
         return locator;
+    }
+
+    private String findBasicUrl(String urlName) {
+        return getProperty(urlName);
+    }
+
+    private String getProperty(String propertyName) {
+        return objectRepository.getProperty(propertyName);
     }
 
 
