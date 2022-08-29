@@ -12,6 +12,8 @@ public class YandexSearchPage extends PageActions {
     private final String baseUrl = objRepo.getBasicUrl("yandex.searchPage.baseUrl");
 
     private final By homeLogo = objRepo.getLocator("yandex.searchPage.homeLogo.xpath");
+    private final By searchInputField = objRepo.getLocator("yandex.searchPage.inputField.search.xpath");
+    private final By searchSubmitButton = objRepo.getLocator("yandex.searchPage.submitButton.search.xpath");
 
     public YandexSearchPage(WebDriver driver) {
         super(driver);
@@ -23,6 +25,11 @@ public class YandexSearchPage extends PageActions {
     public By getHomeLogo() {
         return homeLogo;
     }
-
+    public By getSearchInputField() {
+        return searchInputField;
+    }
+    public By getSearchSubmitButton() {
+        return searchSubmitButton;
+    }
 
 }

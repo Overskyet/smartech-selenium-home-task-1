@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class PageActions {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     public PageActions() {}
 
@@ -56,12 +56,21 @@ public class PageActions {
         return driver.getCurrentUrl();
     }
 
+    public String getAttributeValue(By element, String attributeName) {
+        return find(element).getAttribute(attributeName);
+    }
+
     public void waitFor(By element, long seconds) {
         new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
     public void hightlightElement(By element, Long duration) {
         new Highlighter(driver).highlightElement(find(element), duration);
+    }
+
+    public boolean textContains(By element, String text){
+        String elementText = getText(element);
+        return elementText.contains(text);
     }
 
 }

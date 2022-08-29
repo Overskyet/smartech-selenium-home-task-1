@@ -1,8 +1,11 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.avtodispetcher.AvtodispetcherMainPage;
+import page.avtodispetcher.AvtodispetcherDistancePage;
 import page.avtodispetcher.AvtodispetcherResultPage;
 import page.yandex.YandexResultPage;
 import page.yandex.YandexSearchPage;
+
+import java.util.ArrayList;
 
 public class SampleTest extends BaseTest {
 
@@ -10,18 +13,44 @@ public class SampleTest extends BaseTest {
     public void sampleFirstTestScenario() {
         YandexSearchPage searchPage = new YandexSearchPage(driver);
         searchPage.visit(searchPage.getBaseUrl());
-        searchPage.hightlightElement(searchPage.getHomeLogo(), 5L);
+        searchPage.waitFor(searchPage.getHomeLogo(), 10L);
+        searchPage.type(searchPage.getSearchInputField(), "расчет расстояний между городами");
+        searchPage.clickOn(searchPage.getSearchSubmitButton());
 
-        YandexResultPage resultPage = new YandexResultPage(driver);
-        resultPage.visit("https://yandex.ru/search/?lr=15&oprnd=9585134529&text=dfds");
+        YandexResultPage yaResultPage = new YandexResultPage(driver);
+        String actualSearchResultLink = yaResultPage.getAttributeValue(yaResultPage.getResultPageAvtodispetcherLink(), "href");
+        yaResultPage.clickOn(yaResultPage.getResultPageAvtodispetcherLink());
+
+        AvtodispetcherDistancePage avtoDistancePage = new AvtodispetcherDistancePage(driver);
+
+        Assert.assertEquals(actualSearchResultLink, avtoDistancePage.getBaseUrl());
+
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs2.get(1));
+        //TODO: Create helper for tab switching
+
+        avtoDistancePage.waitFor(avtoDistancePage.getDistancePageInputFieldFrom(), 10L);
+
+        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFrom());
+        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFrom(), "Тула");
+
+        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldTo());
+        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldTo(), "Санкт-Петербург");
+
+        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFuelConsumption());
+        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelConsumption(), "9");
+
+        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFuelPrice());
+        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelPrice(), "47");
+
+        avtoDistancePage.clickOn(avtoDistancePage.getDistancePageSubmitButton());
+
+        AvtodispetcherResultPage adResultPage = new AvtodispetcherResultPage(driver);
+        adResultPage.waitFor(adResultPage.getTotalDistance(), 10L);
+        Assert.assertEquals(adResultPage.getText(adResultPage.getTotalDistance()), "897");
+        Assert.assertTrue(adResultPage.textContains(adResultPage.getTotalAmount(), "3726"),
+                "Expected result: Стомость топлива: 3726\n" + "Actual result: " + adResultPage.getText(adResultPage.getTotalAmount()));
+
     }
 
-    @Test
-    public void sampleSecondTestScenario() {
-        AvtodispetcherMainPage mainPage = new AvtodispetcherMainPage(driver);
-        mainPage.visit("https://www.avtodispetcher.ru/distance/");
-
-        AvtodispetcherResultPage resultPage = new AvtodispetcherResultPage(driver);
-        resultPage.visit("https://www.avtodispetcher.ru/distance/?from=%D0%A2%D1%83%D0%BB%D0%B0&to=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&v=&vt=car&rm=110&rp=90&rs=60&ru=40&fc=9&fp=42&ov=&atn=&aup=&atr=&afd=&ab=&acb=");
-    }
 }
