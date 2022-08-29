@@ -41,7 +41,7 @@ public class SampleTest extends BaseTest {
         avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelConsumption(), "9");
 
         avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFuelPrice());
-        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelPrice(), "47");
+        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelPrice(), "46");
 
         avtoDistancePage.clickOn(avtoDistancePage.getDistancePageSubmitButton());
 
