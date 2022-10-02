@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/browser/Switcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_repo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/object_repo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,18 +36,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SampleTest" type="TestNG">
       <module name="smartech-selenium-home-task-1" />
@@ -178,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661009913286</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Minor fixes">
+      <created>1661733288561</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661733288561</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Minor fixes">
+      <created>1661733315886</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1661733315886</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

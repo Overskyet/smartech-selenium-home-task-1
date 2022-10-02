@@ -52,5 +52,4 @@ public class SampleTest extends BaseTest {
                 "Expected result: Стомость топлива: 3726\n" + "Actual result: " + adResultPage.getText(adResultPage.getTotalAmount()));
 
     }
-
 }
