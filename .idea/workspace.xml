@@ -3,11 +3,28 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="Overskyet" />
+    <option name="SERVER_URL" value="http://localhost:8111" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/browser/Switcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/driver/WebDriverEnv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/object_repo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/browser/Switcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/browser/TabSwitcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +42,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../../../Program Files/JDK/jdk-11/lib/src.zip!/java.base/java/util/Properties.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,17 +56,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.teamcityPluginOptions"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="SampleTest" type="TestNG">
       <module name="smartech-selenium-home-task-1" />
@@ -71,6 +91,11 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SuitableConfigurationIdsCache">
+    <SERVER_URL values="" />
+    <FIRST_MONTH_REVISION values="" />
+    <SUITABLE_CONFIGURATIONS_IDS values="" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="" />
@@ -184,7 +209,28 @@
       <option name="project" value="LOCAL" />
       <updated>1661733315886</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Minor fixes">
+      <created>1664723836641</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664723836641</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Minor fixes">
+      <created>1670899954502</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670899954502</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minor fixes">
+      <created>1670900070972</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670900070972</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,5 +264,9 @@
         <watch expression="elementText" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

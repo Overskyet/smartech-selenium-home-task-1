@@ -1,19 +1,14 @@
-package helper.locator;
+package helper.config;
 
 import org.openqa.selenium.By;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-public class ObjectRepository {
+public class Locators {
 
     private Properties objectRepository;
 
-    public ObjectRepository(String fileName) {
+    public Locators(String fileName) {
         setupObjectRepository(fileName);
     }
 
@@ -26,14 +21,7 @@ public class ObjectRepository {
     }
 
     private void setupObjectRepository(String fileName) {
-        File file = new File(fileName);
-        objectRepository = new Properties();
-        try {
-            InputStreamReader reader = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
-            objectRepository.load(reader);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+        objectRepository = new ConfigInitialization(fileName).setupProperties();
     }
 
     private By findLocator(String locatorName)

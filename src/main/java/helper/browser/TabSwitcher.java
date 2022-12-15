@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Switcher {
+public class TabSwitcher {
     private final WebDriver driver;
 
-    public Switcher(WebDriver driver) {
+    public TabSwitcher(WebDriver driver) {
         this.driver = driver;
     }
 

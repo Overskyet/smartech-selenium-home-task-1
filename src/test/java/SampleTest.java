@@ -19,15 +19,10 @@ public class SampleTest extends BaseTest {
 
         YandexResultPage yaResultPage = new YandexResultPage(driver);
         String actualSearchResultLink = yaResultPage.getAttributeValue(yaResultPage.getResultPageAvtodispetcherLink(), "href");
-        yaResultPage.clickOn(yaResultPage.getResultPageAvtodispetcherLink());
 
-        AvtodispetcherDistancePage avtoDistancePage = new AvtodispetcherDistancePage(driver);
+        AvtodispetcherDistancePage avtoDistancePage = yaResultPage.openAvtodispetcherPage();
 
         Assert.assertEquals(actualSearchResultLink, avtoDistancePage.getBaseUrl());
-
-        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs2.get(1));
-        //TODO: Create helper for tab switching
 
         avtoDistancePage.waitFor(avtoDistancePage.getDistancePageInputFieldFrom(), 10L);
 

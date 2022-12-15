@@ -1,13 +1,14 @@
 package page.yandex;
 
 import helper.action.PageActions;
-import helper.locator.ObjectRepository;
+import helper.config.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import page.avtodispetcher.AvtodispetcherDistancePage;
 
 public class YandexResultPage extends PageActions {
 
-    private final ObjectRepository objRepo = new ObjectRepository("object_repo.properties");
+    private final Locators objRepo = new Locators("config.properties");
 
     private final By resultPageAvtodispetcherLink = objRepo.getLocator("yandex.resultPage.link.avtodispetcher.xpath");
 
@@ -17,5 +18,11 @@ public class YandexResultPage extends PageActions {
 
     public By getResultPageAvtodispetcherLink() {
         return resultPageAvtodispetcherLink;
+    }
+
+    public AvtodispetcherDistancePage openAvtodispetcherPage() {
+        clickOn(getResultPageAvtodispetcherLink());
+        switchToLastOpenedTab();
+        return new AvtodispetcherDistancePage(driver);
     }
 }

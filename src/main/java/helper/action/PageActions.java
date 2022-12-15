@@ -1,5 +1,6 @@
 package helper.action;
 
+import helper.browser.TabSwitcher;
 import helper.condition.ElementPresence;
 import helper.page.Highlighter;
 import org.openqa.selenium.By;
@@ -12,7 +13,7 @@ import java.time.Duration;
 
 public class PageActions {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     public PageActions() {}
 
@@ -22,6 +23,11 @@ public class PageActions {
 
     public void visit(String url) {
         driver.get(url);
+    }
+
+    public void switchToLastOpenedTab() {
+        TabSwitcher switcher = new TabSwitcher(driver);
+        switcher.switchToLastOpenedTab();
     }
 
     public WebElement find(By element) {
