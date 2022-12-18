@@ -1,11 +1,11 @@
 package page.avtodispetcher;
 
-import helper.action.PageActions;
+import helper.basepage.BasePage;
 import helper.config.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AvtodispetcherResultPage extends PageActions {
+public class AvtodispetcherResultPage extends BasePage {
 
     private final Locators objRepo = new Locators("config.properties");
     private final By totalDistance = objRepo.getLocator("avtodispetcher.resultPage.field.totalDistance.xpath");

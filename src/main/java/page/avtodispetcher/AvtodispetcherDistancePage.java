@@ -1,11 +1,11 @@
 package page.avtodispetcher;
 
-import helper.action.PageActions;
+import helper.basepage.BasePage;
 import helper.config.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AvtodispetcherDistancePage extends PageActions {
+public class AvtodispetcherDistancePage extends BasePage {
 
     private final Locators objRepo = new Locators("config.properties");
 

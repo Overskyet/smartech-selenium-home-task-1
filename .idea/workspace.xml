@@ -8,23 +8,21 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/driver/WebDriverEnv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/Files.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes&#10;Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/enums/ImageExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/enums/PageName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/exception/PageClassNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_repo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/browser/Switcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/browser/TabSwitcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/locator/ObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Files.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -60,13 +60,22 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/firmware-int-srv-develop",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.teamcityPluginOptions"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="helper.exception" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="helper.enums" />
+      <recent name="helper.basepage" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="SampleTest" type="TestNG">
       <module name="smartech-selenium-home-task-1" />
@@ -230,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670900070972</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Minor fixes&#10;Refactoring">
+      <created>1671074911239</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671074911239</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,7 +272,8 @@
     <MESSAGE value="Locator for YandexSearchPage added" />
     <MESSAGE value="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated" />
     <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="Minor fixes&#10;Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes&#10;Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

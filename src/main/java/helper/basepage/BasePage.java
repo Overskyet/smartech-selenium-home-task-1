@@ -1,4 +1,4 @@
-package helper.action;
+package helper.basepage;
 
 import helper.browser.TabSwitcher;
 import helper.condition.ElementPresence;
@@ -11,13 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class PageActions {
+public class BasePage {
 
     protected WebDriver driver;
 
-    public PageActions() {}
-
-    public PageActions(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -58,7 +56,7 @@ public class PageActions {
         return driver.getTitle();
     }
 
-    public String getUrl() {
+    public String getActualURL() {
         return driver.getCurrentUrl();
     }
 
@@ -78,5 +76,9 @@ public class PageActions {
         String elementText = getText(element);
         return elementText.contains(text);
     }
+
+//    public boolean isOpened() {
+//        return getActualURL().equals();
+//    }
 
 }

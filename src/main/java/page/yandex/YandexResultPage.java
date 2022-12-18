@@ -1,12 +1,12 @@
 package page.yandex;
 
-import helper.action.PageActions;
+import helper.basepage.BasePage;
 import helper.config.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import page.avtodispetcher.AvtodispetcherDistancePage;
 
-public class YandexResultPage extends PageActions {
+public class YandexResultPage extends BasePage {
 
     private final Locators objRepo = new Locators("config.properties");
 
