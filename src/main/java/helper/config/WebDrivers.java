@@ -24,7 +24,7 @@ public class WebDrivers {
     }
 
     private WebDriver getDriverFromSettings() {
-        //TODO: Handle missing property key
+        //TODO Handle missing property key
         String driverToUse = getProperty();
 
         WebDriver driver = null;
@@ -33,12 +33,15 @@ public class WebDrivers {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
+                break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
+                break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
         }
         return driver;
     }

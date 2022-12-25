@@ -9,17 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes&#10;Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/driver/WebDriverEnv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/page/Highlighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/page/Highlighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Wait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671330028073</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Minor fixes&#10;Refactoring">
+      <created>1672010931813</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672010931813</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
