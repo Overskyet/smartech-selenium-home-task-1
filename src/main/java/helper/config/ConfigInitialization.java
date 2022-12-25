@@ -1,7 +1,7 @@
 package helper.config;
 
 import helper.exception.PageClassNotFoundException;
-import util.Files;
+import utils.Files;
 
 import java.io.File;
 import java.io.FileInputStream;

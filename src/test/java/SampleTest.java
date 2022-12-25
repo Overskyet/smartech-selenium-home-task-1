@@ -8,7 +8,7 @@ import page.avtodispetcher.AvtodispetcherDistancePage;
 import page.avtodispetcher.AvtodispetcherResultPage;
 import page.yandex.YandexResultPage;
 import page.yandex.YandexSearchPage;
-import util.Files;
+import utils.Files;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,14 +20,16 @@ public class SampleTest extends BaseTest {
         YandexSearchPage searchPage = new YandexSearchPage(driver);
         searchPage.visit(searchPage.getBaseUrl());
         searchPage.waitFor(searchPage.getHomeLogo(), 10L);
+
         //Assert.assertTrue(searchPage.isOpened());
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-        File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        try {
-            FileHandler.copy(file, Files.saveScreenshotAs("test", ImageExtension.PNG));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
+//        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//        File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//        try {
+//            FileHandler.copy(file, Files.saveScreenshotAs("test", ImageExtension.PNG));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
 
 
         YandexResultPage yaResultPage = searchPage.searchFor("расчет расстояний между городами");

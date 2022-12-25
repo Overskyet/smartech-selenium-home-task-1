@@ -3,9 +3,7 @@ package helper.page;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import util.Wait;
-
-import java.util.concurrent.TimeUnit;
+import utils.Wait;
 
 public class Highlighter {
     private final WebDriver driver;
