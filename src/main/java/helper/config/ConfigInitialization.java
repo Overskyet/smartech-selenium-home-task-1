@@ -1,6 +1,5 @@
 package helper.config;
 
-import helper.exception.PageClassNotFoundException;
 import utils.Files;
 
 import java.io.File;
@@ -12,25 +11,24 @@ import java.util.Arrays;
 import java.util.Properties;
 
 class ConfigInitialization {
-    private final String fileName;
+    private final String propertiesFileName;
     private Properties properties;
 
-    ConfigInitialization(String filename) {
-        this.fileName = filename;
+    ConfigInitialization(String propertiesFileName) {
+        this.propertiesFileName = propertiesFileName;
     }
 
     Properties setupProperties() {
-        File file = new File(fileName);
+        File file = new File(propertiesFileName);
         properties = new Properties();
+
         try {
             InputStreamReader reader = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
             properties.load(reader);
         } catch (SecurityException | IOException e) {
-            System.out.println(e.getMessage() + "\n" + e +
-                    "\nWas expecting: " + fileName +
-                    "\nGot: " + Arrays.toString(Files.listFilesWith(".properties")));
-            throw new PageClassNotFoundException(e.getMessage() + "\n" + e +
-                    "\nWas expecting: " + fileName +
+            throw new RuntimeException("Error reading properties file: \n" +
+                    e.getMessage() + "\n" + e +
+                    "\nWas expecting: " + propertiesFileName +
                     "\nGot: " + Arrays.toString(Files.listFilesWith(".properties")));
         }
         return properties;

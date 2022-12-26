@@ -1,6 +1,7 @@
 package helper.basepage;
 
 import helper.enums.PageName;
+import helper.exception.PageClassNotFoundException;
 import org.openqa.selenium.WebDriver;
 import page.avtodispetcher.AvtodispetcherDistancePage;
 
@@ -20,7 +21,7 @@ public class PageFactoryImpl implements PageFactory{
     public BasePage createPage(PageName pageName, WebDriver driver) {
         switch (pageName) {
             case AVTODISPETCHER: return new AvtodispetcherDistancePage(driver);
-            default: throw new IllegalStateException("Can't find a Page Class with the name: " + pageName);
+            default: throw new PageClassNotFoundException("Can't find a Page Class with the name: " + pageName);
         }
     }
 }

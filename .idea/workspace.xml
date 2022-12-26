@@ -9,7 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes&#10;Refactoring">
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/driver/DriverSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672010931813</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Minor fixes&#10;Refactoring">
+      <created>1672011238310</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672011238310</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
