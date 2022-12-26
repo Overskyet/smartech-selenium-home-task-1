@@ -2,10 +2,7 @@ package helper.config;
 
 import utils.Files;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Properties;
@@ -25,6 +22,9 @@ class ConfigInitialization {
         try {
             InputStreamReader reader = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
             properties.load(reader);
+        }  catch (FileNotFoundException e) {
+            throw new RuntimeException("Properties file not found: " + propertiesFileName +
+                    "\nGot: " + Arrays.toString(Files.listFilesWith(".properties")));
         } catch (SecurityException | IOException e) {
             throw new RuntimeException("Error reading properties file: \n" +
                     e.getMessage() + "\n" + e +
