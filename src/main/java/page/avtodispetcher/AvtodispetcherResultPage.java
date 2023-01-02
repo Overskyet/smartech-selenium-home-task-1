@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 
 public class AvtodispetcherResultPage extends BasePage {
 
-    private final Locators objRepo = new Locators("config.properties");
-    private final By totalDistance = objRepo.getLocator("avtodispetcher.resultPage.field.totalDistance.xpath");
-    private final By totalAmount = objRepo.getLocator("avtodispetcher.resultPage.field.totalAmount.xpath");
+    private final Locators objRepo = new Locators();
+    private final By totalDistance = objRepo.getLocator("avtodispetcher.resultPage.field.totalDistance");
+    private final By totalAmount = objRepo.getLocator("avtodispetcher.resultPage.field.totalAmount");
 
     public AvtodispetcherResultPage(WebDriver driver) {
         super(driver);

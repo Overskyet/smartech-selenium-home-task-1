@@ -7,15 +7,15 @@ import org.openqa.selenium.WebDriver;
 
 public class AvtodispetcherDistancePage extends BasePage {
 
-    private final Locators objRepo = new Locators("config.properties");
+    private final Locators objRepo = new Locators();
 
     private final String baseUrl = objRepo.getBasicUrl("avtodispetcher.distance.baseUrl");
 
-    private final By distancePageInputFieldFrom = objRepo.getLocator("avtodispetcher.distance.inputField.From.xpath");
-    private final By distancePageInputFieldTo = objRepo.getLocator("avtodispetcher.distance.inputField.To.xpath");
-    private final By distancePageInputFieldFuelConsumption = objRepo.getLocator("avtodispetcher.distance.inputField.FuelConsumption.xpath");
-    private final By distancePageInputFieldFuelPrice = objRepo.getLocator("avtodispetcher.distance.inputField.FuelPrice.xpath");
-    private final By distancePageSubmitButton = objRepo.getLocator("avtodispetcher.distance.submitButton.search.xpath");
+    private final By distancePageInputFieldFrom = objRepo.getLocator("avtodispetcher.distance.inputField.from");
+    private final By distancePageInputFieldTo = objRepo.getLocator("avtodispetcher.distance.inputField.to");
+    private final By distancePageInputFieldFuelConsumption = objRepo.getLocator("avtodispetcher.distance.inputField.fuelConsumption");
+    private final By distancePageInputFieldFuelPrice = objRepo.getLocator("avtodispetcher.distance.inputField.fuelPrice");
+    private final By distancePageSubmitButton = objRepo.getLocator("avtodispetcher.distance.submitButton.search");
 
     public AvtodispetcherDistancePage(WebDriver driver) {
         super(driver);

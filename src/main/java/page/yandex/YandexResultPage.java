@@ -8,9 +8,9 @@ import page.avtodispetcher.AvtodispetcherDistancePage;
 
 public class YandexResultPage extends BasePage {
 
-    private final Locators objRepo = new Locators("config.properties");
+    private final Locators objRepo = new Locators();
 
-    private final By resultPageAvtodispetcherLink = objRepo.getLocator("yandex.resultPage.link.avtodispetcher.xpath");
+    private final By resultPageAvtodispetcherLink = objRepo.getLocator("yandex.resultPage.link.avtodispetcher");
 
     public YandexResultPage(WebDriver driver) {
         super(driver);

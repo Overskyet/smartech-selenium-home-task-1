@@ -9,11 +9,13 @@ public class Locators {
 
     private Properties objectRepository;
 
+    public Locators() {
+        setObjectRepository();
+    }
     public Locators(String fileName) {
         setupObjectRepository(fileName);
     }
 
-    @Nullable
     public By getLocator(String locatorName) {
         return findLocator(locatorName);
     }
@@ -22,19 +24,26 @@ public class Locators {
         return findBasicUrl(urlName);
     }
 
+    private void setObjectRepository() {
+        objectRepository = new ConfigInitialization().setupProperties();
+    }
     private void setupObjectRepository(String fileName) {
         objectRepository = new ConfigInitialization(fileName).setupProperties();
     }
 
-    @Nullable
     private By findLocator(String locatorName)
     {
-        //TODO: Handle missing property key
         String locatorProperty = getProperty(locatorName);
+
+        if (locatorProperty == null || locatorProperty.isBlank()) {
+            throw new IllegalArgumentException(String.format("Can not find locator property '%s' in the properties" +
+                    "\nEnsure that the property key '%s' is in the properties file", locatorName, locatorName));
+        }
+
         String locatorType = locatorProperty.split(";")[0];
         String locatorValue = locatorProperty.split(";")[1];
 
-        By locator = null;
+        By locator;
 
         switch(locatorType)
         {
@@ -59,6 +68,8 @@ public class Locators {
             case "xpath":
                 locator = By.xpath(locatorValue);
                 break;
+            default: throw new IllegalArgumentException(String.format("Can not initialize new locator using provided locator type: %s" +
+                "\nCheck the value of '%s' property key in the properties and ensure that locator type is correct", locatorType, locatorName));
         }
         return locator;
     }

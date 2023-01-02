@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 
 public class YandexSearchPage extends BasePage {
 
-    private final Locators objRepo = new Locators("config.properties");
+    private final Locators objRepo = new Locators();
 
     private final String baseUrl = objRepo.getBasicUrl("yandex.searchPage.baseUrl");
 
-    private final By homeLogo = objRepo.getLocator("yandex.searchPage.homeLogo.xpath");
-    private final By searchInputField = objRepo.getLocator("yandex.searchPage.inputField.css");
-    private final By searchSubmitButton = objRepo.getLocator("yandex.searchPage.submitButton.css");
+    private final By homeLogo = objRepo.getLocator("yandex.searchPage.homeLogo");
+    private final By searchInputField = objRepo.getLocator("yandex.searchPage.inputField");
+    private final By searchSubmitButton = objRepo.getLocator("yandex.searchPage.submitButton");
 
     public YandexSearchPage(WebDriver driver) {
         super(driver);
