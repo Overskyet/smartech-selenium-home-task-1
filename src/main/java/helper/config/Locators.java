@@ -2,7 +2,6 @@ package helper.config;
 
 import org.openqa.selenium.By;
 
-import javax.annotation.Nullable;
 import java.util.Properties;
 
 public class Locators {
@@ -10,7 +9,7 @@ public class Locators {
     private Properties objectRepository;
 
     public Locators() {
-        setObjectRepository();
+        setupObjectRepository();
     }
     public Locators(String fileName) {
         setupObjectRepository(fileName);
@@ -24,7 +23,7 @@ public class Locators {
         return findBasicUrl(urlName);
     }
 
-    private void setObjectRepository() {
+    private void setupObjectRepository() {
         objectRepository = new ConfigInitialization().setupProperties();
     }
     private void setupObjectRepository(String fileName) {
