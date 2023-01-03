@@ -8,7 +8,7 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        driver = new DriverListener().getDecoratedWebDriver(new WebDrivers("config.properties").initWebDriver());
+        driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
 
 //         TODO: Access config.properties from a single place
 //         * Be able to pass the drivers through command line arguments

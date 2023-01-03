@@ -11,6 +11,9 @@ import java.util.Properties;
 public class WebDrivers {
     private Properties driversSettings;
 
+    public WebDrivers() {
+        setupDriversSettings();
+    }
     public WebDrivers(String propertiesFileName){
         setupDriverSettings(propertiesFileName);
     }
@@ -19,6 +22,9 @@ public class WebDrivers {
         return getDriverFromSettings("webdriver");
     }
 
+    private void setupDriversSettings() {
+        driversSettings = new ConfigInitialization().setupProperties();
+    }
     private void setupDriverSettings(String fileName) {
         driversSettings = new ConfigInitialization(fileName).setupProperties();
     }
