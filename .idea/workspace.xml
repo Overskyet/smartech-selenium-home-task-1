@@ -8,9 +8,9 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672705680848</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactoring">
+      <created>1672714036390</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1672714036390</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,7 +318,6 @@
     <MESSAGE value="Actions added" />
     <MESSAGE value="PageObjects initialized" />
     <MESSAGE value="BaseTest class added&#10;Sample test scenarios added" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="New helper methods added" />
     <MESSAGE value="Object Repository class updated" />
     <MESSAGE value="Locator for YandexSearchPage added" />
@@ -319,7 +325,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Minor fixes&#10;Refactoring" />
     <MESSAGE value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

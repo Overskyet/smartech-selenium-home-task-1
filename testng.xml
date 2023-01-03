@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="SmartechSeleniumHomeTask1" verbose="1" parallel="tests" thread-count="2" configfailurepolicy="skip">
-    <test name="SampleTest1">
+    <test name="Smoke">
         <classes>
             <class name="SampleTest" />
         </classes>
     </test>
 
-    <test name="SampleTest2">
+    <test name="Regression">
         <classes>
             <class name="SampleTest" />
         </classes>
