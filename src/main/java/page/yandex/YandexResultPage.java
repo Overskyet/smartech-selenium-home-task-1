@@ -1,10 +1,11 @@
 package page.yandex;
 
 import helper.basepage.BasePage;
+import helper.basepage.PageFactoryImpl;
 import helper.config.Locators;
+import helper.enums.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import page.avtodispetcher.AvtodispetcherDistancePage;
 
 public class YandexResultPage extends BasePage {
 
@@ -16,13 +17,13 @@ public class YandexResultPage extends BasePage {
         super(driver);
     }
 
-    public By getResultPageAvtodispetcherLink() {
-        return resultPageAvtodispetcherLink;
+    public boolean verifyAvtodispetcherPageIsPresent() {
+        return isAttributePresent(resultPageAvtodispetcherLink, "href");
     }
 
-    public AvtodispetcherDistancePage openAvtodispetcherPage() {
-        clickOn(getResultPageAvtodispetcherLink());
+    public BasePage openAvtodispetcherPage() {
+        clickOn(resultPageAvtodispetcherLink);
         switchToLastOpenedTab();
-        return new AvtodispetcherDistancePage(driver);
+        return PageFactoryImpl.getInstance().createPage(Page.AVTODISPETCHER_DISTANCE, driver);
     }
 }

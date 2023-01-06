@@ -1,7 +1,9 @@
 package page.yandex;
 
 import helper.basepage.BasePage;
+import helper.basepage.PageFactoryImpl;
 import helper.config.Locators;
+import helper.enums.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,13 +20,6 @@ public class YandexSearchPage extends BasePage {
     public YandexSearchPage(WebDriver driver) {
         super(driver);
     }
-
-    public String getBaseUrl() {
-        return baseUrl;
-    }
-    public By getHomeLogo() {
-        return homeLogo;
-    }
     public By getSearchInputField() {
         return searchInputField;
     }
@@ -32,9 +27,14 @@ public class YandexSearchPage extends BasePage {
         return searchSubmitButton;
     }
 
-    public YandexResultPage searchFor(String searchRequest) {
+    public BasePage searchFor(String searchRequest) {
         type(getSearchInputField(), searchRequest);
         clickOn(getSearchSubmitButton());
-        return new YandexResultPage(driver);
+        return PageFactoryImpl.getInstance().createPage(Page.YANDEX_SEARCH_RESULT, driver);
+    }
+
+    public YandexSearchPage open() {
+        super.visit(this.baseUrl);
+        return this;
     }
 }

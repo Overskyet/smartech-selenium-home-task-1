@@ -9,7 +9,9 @@ public class AvtodispetcherResultPage extends BasePage {
 
     private final Locators objRepo = new Locators();
     private final By totalDistance = objRepo.getLocator("avtodispetcher.resultPage.field.totalDistance");
-    private final By totalAmount = objRepo.getLocator("avtodispetcher.resultPage.field.totalAmount");
+    private final By fuelCost = objRepo.getLocator("avtodispetcher.resultPage.field.fuelCost");
+
+    private final By editTheRouteLink = objRepo.getLocator("avtodispetcher.resultPage.link.editTheRoute");
 
     public AvtodispetcherResultPage(WebDriver driver) {
         super(driver);
@@ -18,8 +20,18 @@ public class AvtodispetcherResultPage extends BasePage {
     public By getTotalDistance() {
         return totalDistance;
     }
-    public By getTotalAmount() {
-        return totalAmount;
+    public By getFuelCost() {
+        return fuelCost;
+    }
+    public By getEditTheRouteLink() {
+        return editTheRouteLink;
     }
 
+    public boolean resultsOfCalculationAre(String totalDistance, String fuelCost) {
+        return (super.getText(this.getTotalDistance()).equals(totalDistance) && super.textContains(this.getFuelCost(), fuelCost));
+    }
+
+    public void editTheRoute() {
+        super.clickOn(getEditTheRouteLink());
+    }
 }

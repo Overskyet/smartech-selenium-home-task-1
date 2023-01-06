@@ -1,66 +1,58 @@
-import helper.enums.ImageExtension;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.avtodispetcher.AvtodispetcherDistancePage;
 import page.avtodispetcher.AvtodispetcherResultPage;
 import page.yandex.YandexResultPage;
 import page.yandex.YandexSearchPage;
-import utils.Files;
-
-import java.io.File;
-import java.io.IOException;
 
 public class SampleTest extends BaseTest {
 
-    @Test
-    public void sampleFirstTestScenario() {
-        YandexSearchPage searchPage = new YandexSearchPage(driver);
-        searchPage.visit(searchPage.getBaseUrl());
-        searchPage.waitFor(searchPage.getHomeLogo(), 10L);
+    @Test(priority = 1)
+    public void verifyAvtodispetcherPageIsDisplayedInSearchResult() {
+        YandexSearchPage searchPage = new YandexSearchPage(driver).open();
+        YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
 
-        //Assert.assertTrue(searchPage.isOpened());
+        Assert.assertTrue(searchResult.verifyAvtodispetcherPageIsPresent(), "Avtodispetcher page is not present in search result");
+    }
 
-//        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-//        File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
-//        try {
-//            FileHandler.copy(file, Files.saveScreenshotAs("test", ImageExtension.PNG));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+    @Test(priority = 2)
+    public void verifyAvtodispetcherPageIsAccessibleFromSearchResult() {
+        YandexSearchPage searchPage = new YandexSearchPage(driver).open();
+        YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
+        AvtodispetcherDistancePage distancePage = (AvtodispetcherDistancePage) yaResultPage.openAvtodispetcherPage();
 
+        Assert.assertTrue(distancePage.verifyAvtodispetcherPageIsOpened(), "The wrong page was opened. Expected to open Avtodispetcher page");
+    }
 
-        YandexResultPage yaResultPage = searchPage.searchFor("расчет расстояний между городами");
+    @Test(priority = 3)
+    public void verifyUserIsAbleToCalculateDistanceAndFuelCost() {
+        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(driver).open();
+        AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
+                .addDepartureCity("Тула")
+                .addDestinationCity("Санкт-Петербург")
+                .addFuelConsumption("9")
+                .addFuelPrice("46")
+                .submit();
 
-        String actualSearchResultLink = yaResultPage.getAttributeValue(yaResultPage.getResultPageAvtodispetcherLink(), "href");
+        Assert.assertTrue(result.resultsOfCalculationAre("897", "3726"), "Results of calculation are not correct, or element is not displayed");
+    }
 
-        AvtodispetcherDistancePage avtoDistancePage = yaResultPage.openAvtodispetcherPage();
+    @Test(priority = 3)
+    public void verifyUserIsAbleToEditTheCalculatedRoute() {
+        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(driver).open();
+        AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
+                .addDepartureCity("Тула")
+                .addDestinationCity("Санкт-Петербург")
+                .addFuelConsumption("9")
+                .addFuelPrice("46")
+                .submit();
 
-        Assert.assertEquals(actualSearchResultLink, avtoDistancePage.getBaseUrl());
+        result.editTheRoute();
 
-        avtoDistancePage.waitFor(avtoDistancePage.getDistancePageInputFieldFrom(), 10L);
+        result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
+                .addTransitCity("Великий Новгород")
+                .submit();
 
-        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFrom());
-        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFrom(), "Тула");
-
-        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldTo());
-        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldTo(), "Санкт-Петербург");
-
-        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFuelConsumption());
-        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelConsumption(), "9");
-
-        avtoDistancePage.clear(avtoDistancePage.getDistancePageInputFieldFuelPrice());
-        avtoDistancePage.type(avtoDistancePage.getDistancePageInputFieldFuelPrice(), "46");
-
-        avtoDistancePage.clickOn(avtoDistancePage.getDistancePageSubmitButton());
-
-        AvtodispetcherResultPage adResultPage = new AvtodispetcherResultPage(driver);
-        adResultPage.waitFor(adResultPage.getTotalDistance(), 10L);
-        Assert.assertEquals(adResultPage.getText(adResultPage.getTotalDistance()), "897");
-        Assert.assertTrue(adResultPage.textContains(adResultPage.getTotalAmount(), "3726"),
-                "Expected result: Стомость топлива: 3726\n" + "Actual result: " + adResultPage.getText(adResultPage.getTotalAmount()));
-
+        Assert.assertTrue(result.resultsOfCalculationAre("966", "4002"), "Results of calculation are not correct, or element is not displayed");
     }
 }

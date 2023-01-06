@@ -24,8 +24,7 @@ class ConfigInitialization {
         File file = new File(propertiesFileName);
         properties = new Properties();
 
-        try {
-            InputStreamReader reader = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
             properties.load(reader);
         }  catch (FileNotFoundException e) {
             throw new RuntimeException("Properties file not found: " + propertiesFileName +

@@ -29,7 +29,7 @@ public class BasePage {
     }
 
     public WebElement find(By element) {
-        return driver.findElement(element);
+        return waitForExplicitly(element, 10);
     }
 
     public void clear(By element) {
@@ -38,6 +38,11 @@ public class BasePage {
 
     public void type(By element, String text) {
         find(element).sendKeys(text);
+    }
+
+    public void clearAndType(By element, String text) {
+        clear(element);
+        type(element, text);
     }
 
     public void clickOn(By element) {
@@ -64,8 +69,15 @@ public class BasePage {
         return find(element).getAttribute(attributeName);
     }
 
+    public boolean isAttributePresent(By element, String attributeName) {
+        return !(getAttributeValue(element, attributeName).isBlank() || getAttributeValue(element, attributeName) == null);
+    }
+
     public void waitFor(By element, long seconds) {
         new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
+    }
+    private WebElement waitForExplicitly(By element, long seconds) {
+        return new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
     public void hightlightElement(By element, Long duration) {
