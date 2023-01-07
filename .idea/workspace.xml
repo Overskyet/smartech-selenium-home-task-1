@@ -8,25 +8,14 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/config/BasicSettings.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/logging/LoggerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log4j2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/helper/driver/DriverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/driver/DriverListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/enums/PageName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/enums/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/page/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/page/Screenshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/logging/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +37,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../../../../../../Program Files/JDK/jdk-11/lib/src.zip!/java.base/java/util/Properties.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,7 +59,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/PageObjectModel-master",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/src/test/resources/testng.xml",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -73,6 +69,11 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="helper.exception" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\main\resources" />
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="helper.driver" />
@@ -85,7 +86,8 @@
       <module name="smartech-selenium-home-task-1" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <extension name="coverage" per_test_coverage_enabled="false" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -97,6 +99,28 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <option name="PROPERTIES_FILE" value="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\config.properties" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="smartech-selenium-home-task-1" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SampleTest" />
+      <option name="METHOD_NAME" value="verifyAvtodispetcherPageIsDisplayedInSearchResult" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -117,10 +141,12 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.SampleTest" />
+      <item itemvalue="TestNG.SampleTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
       <item itemvalue="TestNG.SampleTest.verifyUserIsAbleToEditTheCalculatedRoute" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SampleTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
         <item itemvalue="TestNG.SampleTest.verifyUserIsAbleToEditTheCalculatedRoute" />
       </list>
     </recent_temporary>
@@ -342,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672714917014</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added">
+      <created>1672983796878</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1672983796878</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +403,8 @@
     <MESSAGE value="Minor fixes&#10;Refactoring" />
     <MESSAGE value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
