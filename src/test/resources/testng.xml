@@ -4,7 +4,7 @@
 <suite name="SmartechSeleniumHomeTask1" verbose="1">
     <test name="Smoke">
         <classes>
-            <class name="SampleTest">
+            <class name="avtodispetcher.AvtodispetcherTest">
                 <methods>
                     <include name="verifyAvtodispetcherPageIsDisplayedInSearchResult"/>
                 </methods>
@@ -14,7 +14,7 @@
 
     <test name="Regression">
         <classes>
-            <class name="SampleTest">
+            <class name="avtodispetcher.AvtodispetcherTest">
                 <methods>
                     <include name="verifyAvtodispetcherPageIsAccessibleFromSearchResult"/>
                     <include name="verifyUserIsAbleToCalculateDistanceAndFuelCost"/>

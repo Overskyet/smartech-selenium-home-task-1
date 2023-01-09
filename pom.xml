@@ -16,8 +16,9 @@
 
         <selenium.java>4.7.1</selenium.java>
         <testng.version>7.7.0</testng.version>
-        <log4j-api>2.19.0</log4j-api>
-        <log4j-core>${log4j-api}</log4j-core>
+        <logback-core>1.4.5</logback-core>
+        <logback-classic>${logback-core}</logback-classic>
+        <slf4j-api>2.0.5</slf4j-api>
         <webdrivermanager.version>5.3.1</webdrivermanager.version>
     </properties>
 
@@ -35,15 +36,21 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j-api}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback-core}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j-core}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api}</version>
         </dependency>
 
         <dependency>

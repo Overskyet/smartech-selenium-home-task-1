@@ -1,2 +1,6 @@
 //TODO: Remove all OhjectRepo instances from Page classes
 //TODO: Make additional abstraction layer for tab switching
+//TODO: Implement WebDriverListener
+//TODO: Implement a Class that initializes log4j
+//TODO: Implement a Class that takes an original WebDriver, prepares WebDriverListener and returns decorated WebDriver
+//TODO: Externalise test data

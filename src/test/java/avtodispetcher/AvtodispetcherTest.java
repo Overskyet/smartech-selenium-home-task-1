@@ -1,3 +1,6 @@
+package avtodispetcher;
+
+import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.avtodispetcher.AvtodispetcherDistancePage;
@@ -5,7 +8,7 @@ import page.avtodispetcher.AvtodispetcherResultPage;
 import page.yandex.YandexResultPage;
 import page.yandex.YandexSearchPage;
 
-public class SampleTest extends BaseTest {
+public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 1)
     public void verifyAvtodispetcherPageIsDisplayedInSearchResult() {

@@ -1,3 +1,5 @@
+package basetest;
+
 import helper.config.WebDrivers;
 import helper.driver.DriverListener;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +12,6 @@ public abstract class BaseTest {
     public void setup() {
         driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
 
-//         TODO: Access config.properties from a single place
 //         * Be able to pass the drivers through command line arguments
 //         * Be able to declare the drivers in the properties file
 //         * For each driver in the array create a new WebDriver instance and use it for running test methods
