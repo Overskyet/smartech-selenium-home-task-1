@@ -1,16 +1,21 @@
 package basetest;
 
 import helper.config.WebDrivers;
-import helper.driver.DriverListener;
+import helper.listeners.DriverListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 public abstract class BaseTest {
-    protected WebDriver driver;
+    private WebDriver driver;
+
+    protected WebDriver getDriver() {
+        return this.driver;
+    }
 
     @BeforeMethod
     public void setup() {
         driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
+
 
 //         * Be able to pass the drivers through command line arguments
 //         * Be able to declare the drivers in the properties file

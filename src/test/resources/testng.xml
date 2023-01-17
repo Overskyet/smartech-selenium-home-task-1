@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="SmartechSeleniumHomeTask1" verbose="1">
+
+    <listeners>
+        <listener class-name="helper.listeners.TestListener"/>
+    </listeners>
+
     <test name="Smoke">
         <classes>
             <class name="avtodispetcher.AvtodispetcherTest">
@@ -16,9 +21,7 @@
         <classes>
             <class name="avtodispetcher.AvtodispetcherTest">
                 <methods>
-                    <include name="verifyAvtodispetcherPageIsAccessibleFromSearchResult"/>
-                    <include name="verifyUserIsAbleToCalculateDistanceAndFuelCost"/>
-                    <include name="verifyUserIsAbleToEditTheCalculatedRoute"/>
+                    <exclude name="verifyAvtodispetcherPageIsDisplayedInSearchResult" />
                 </methods>
             </class>
         </classes>

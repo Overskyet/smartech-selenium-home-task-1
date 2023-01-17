@@ -59,7 +59,7 @@ public class AvtodispetcherDistancePage extends BasePage {
     }
 
     public class FormBuilder {
-        private Map<By, String> form = new HashMap<>();
+        private final Map<By, String> form = new HashMap<>();
 
         public FormBuilder addDepartureCity(String cityFrom) {
             form.put(getDepartureCityInputField(), cityFrom);
@@ -96,7 +96,7 @@ public class AvtodispetcherDistancePage extends BasePage {
 
             clickOn(getSubmitButton());
 
-            return PageFactoryImpl.getInstance().createPage(Page.AVTODISPETCHER_RESULT, driver);
+            return PageFactoryImpl.getInstance().createPage(Page.AVTODISPETCHER_RESULT, getDriver());
         }
     }
 }

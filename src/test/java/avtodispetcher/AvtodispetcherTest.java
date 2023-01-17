@@ -12,7 +12,7 @@ public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 1)
     public void verifyAvtodispetcherPageIsDisplayedInSearchResult() {
-        YandexSearchPage searchPage = new YandexSearchPage(driver).open();
+        YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
 
         Assert.assertTrue(searchResult.verifyAvtodispetcherPageIsPresent(), "Avtodispetcher page is not present in search result");
@@ -20,7 +20,7 @@ public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 2)
     public void verifyAvtodispetcherPageIsAccessibleFromSearchResult() {
-        YandexSearchPage searchPage = new YandexSearchPage(driver).open();
+        YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
         AvtodispetcherDistancePage distancePage = (AvtodispetcherDistancePage) yaResultPage.openAvtodispetcherPage();
 
@@ -29,7 +29,7 @@ public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 3)
     public void verifyUserIsAbleToCalculateDistanceAndFuelCost() {
-        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(driver).open();
+        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
                 .addDepartureCity("Тула")
                 .addDestinationCity("Санкт-Петербург")
@@ -42,7 +42,7 @@ public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 3)
     public void verifyUserIsAbleToEditTheCalculatedRoute() {
-        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(driver).open();
+        AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
                 .addDepartureCity("Тула")
                 .addDestinationCity("Санкт-Петербург")

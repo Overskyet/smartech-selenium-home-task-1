@@ -16,7 +16,7 @@
         </encoder>
     </appender>
 
-    <logger name="helper.driver.DriverListener" level="DEBUG">
+    <logger name="helper.listeners.DriverListener" level="DEBUG">
         <appender-ref ref="FILE" />
     </logger>
 

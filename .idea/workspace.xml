@@ -9,17 +9,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Logger has been added&#10;Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/DriverListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/driver/DriverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/driver/DriverListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/logging/LoggerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/logging/MyLoggerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/driver/DriverListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/page/Screenshot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Files.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todos" beforeDir="false" afterPath="$PROJECT_DIR$/todos" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,17 +65,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/src/test/resources/testng.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/selenium-testng-maven-template-master",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="helper.exception" />
@@ -150,8 +156,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToEditTheCalculatedRoute" />
+        <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
       </list>
     </recent_temporary>
   </component>

@@ -10,7 +10,6 @@ public class AvtodispetcherResultPage extends BasePage {
     private final Locators objRepo = new Locators();
     private final By totalDistance = objRepo.getLocator("avtodispetcher.resultPage.field.totalDistance");
     private final By fuelCost = objRepo.getLocator("avtodispetcher.resultPage.field.fuelCost");
-
     private final By editTheRouteLink = objRepo.getLocator("avtodispetcher.resultPage.link.editTheRoute");
 
     public AvtodispetcherResultPage(WebDriver driver) {

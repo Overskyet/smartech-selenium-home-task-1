@@ -24,6 +24,6 @@ public class YandexResultPage extends BasePage {
     public BasePage openAvtodispetcherPage() {
         clickOn(resultPageAvtodispetcherLink);
         switchToLastOpenedTab();
-        return PageFactoryImpl.getInstance().createPage(Page.AVTODISPETCHER_DISTANCE, driver);
+        return PageFactoryImpl.getInstance().createPage(Page.AVTODISPETCHER_DISTANCE, getDriver());
     }
 }

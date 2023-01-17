@@ -4,6 +4,7 @@ import helper.browser.TabSwitcher;
 import helper.condition.ElementPresence;
 import helper.page.Highlighter;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,18 +14,22 @@ import java.time.Duration;
 
 public class BasePage {
 
-    protected WebDriver driver;
+    private WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
 
+    protected WebDriver getDriver() {
+        return driver;
+    }
+
     public void visit(String url) {
-        driver.get(url);
+        this.getDriver().get(url);
     }
 
     public void switchToLastOpenedTab() {
-        TabSwitcher switcher = new TabSwitcher(driver);
+        TabSwitcher switcher = new TabSwitcher(this.getDriver());
         switcher.switchToLastOpenedTab();
     }
 
@@ -50,7 +55,7 @@ public class BasePage {
     }
 
     public boolean elementIsNotPresent(By element) {
-        return new ElementPresence(driver).isNotPresent(element);
+        return new ElementPresence(this.getDriver()).isNotPresent(element);
     }
 
     public String getText(By element) {
@@ -58,11 +63,11 @@ public class BasePage {
     }
 
     public String getTitle() {
-        return driver.getTitle();
+        return this.getDriver().getTitle();
     }
 
     public String getActualURL() {
-        return driver.getCurrentUrl();
+        return this.getDriver().getCurrentUrl();
     }
 
     public String getAttributeValue(By element, String attributeName) {
@@ -74,23 +79,19 @@ public class BasePage {
     }
 
     public void waitFor(By element, long seconds) {
-        new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
+        new WebDriverWait(this.getDriver(), Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
     }
     private WebElement waitForExplicitly(By element, long seconds) {
-        return new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
+        return new WebDriverWait(this.getDriver(), Duration.ofSeconds(seconds)).ignoring(NoSuchElementException.class).until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
     public void hightlightElement(By element, Long duration) {
-        new Highlighter(driver).highlightElement(find(element), duration);
+        new Highlighter(this.getDriver()).highlightElement(find(element), duration);
     }
 
     public boolean textContains(By element, String text){
         String elementText = getText(element);
         return elementText.contains(text);
     }
-
-//    public boolean isOpened() {
-//        return getActualURL().equals();
-//    }
 
 }

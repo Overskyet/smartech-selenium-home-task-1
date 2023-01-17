@@ -30,7 +30,7 @@ public class YandexSearchPage extends BasePage {
     public BasePage searchFor(String searchRequest) {
         type(getSearchInputField(), searchRequest);
         clickOn(getSearchSubmitButton());
-        return PageFactoryImpl.getInstance().createPage(Page.YANDEX_SEARCH_RESULT, driver);
+        return PageFactoryImpl.getInstance().createPage(Page.YANDEX_SEARCH_RESULT, getDriver());
     }
 
     public YandexSearchPage open() {
