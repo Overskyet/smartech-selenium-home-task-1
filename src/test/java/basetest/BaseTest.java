@@ -12,7 +12,7 @@ public abstract class BaseTest {
         return this.driver;
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup() {
         driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
 
@@ -27,7 +27,7 @@ public abstract class BaseTest {
 //         * 4) -> Repeat the steps
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
             driver.quit();

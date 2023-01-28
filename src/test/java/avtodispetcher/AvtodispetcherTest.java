@@ -11,7 +11,7 @@ import utils.Wait;
 
 public class AvtodispetcherTest extends BaseTest {
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"Smoke"})
     public void verifyAvtodispetcherPageIsDisplayedInSearchResult() {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
@@ -19,7 +19,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(searchResult.verifyAvtodispetcherPageIsPresent(), "Avtodispetcher page is not present in search result");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"Regression"})
     public void verifyAvtodispetcherPageIsAccessibleFromSearchResult() {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
@@ -28,7 +28,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(distancePage.verifyAvtodispetcherPageIsOpened(), "The wrong page was opened. Expected to open Avtodispetcher page");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"Regression"})
     public void verifyUserIsAbleToCalculateDistanceAndFuelCost() {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
@@ -41,7 +41,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(result.resultsOfCalculationAre("897", "3726"), "Results of calculation are not correct, or element is not displayed");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"Regression"})
     public void verifyUserIsAbleToEditTheCalculatedRoute() {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
