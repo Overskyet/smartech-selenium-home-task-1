@@ -20,6 +20,10 @@
         <appender-ref ref="FILE" />
     </logger>
 
+    <logger name="helper.listeners.TestListener" level="DEBUG">
+        <appender-ref ref="FILE" />
+    </logger>
+
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />
     </root>

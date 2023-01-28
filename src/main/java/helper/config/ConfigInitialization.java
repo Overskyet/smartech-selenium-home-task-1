@@ -1,6 +1,6 @@
 package helper.config;
 
-import utils.Files;
+import utils.FileManagement;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -28,7 +28,7 @@ class ConfigInitialization {
             properties.load(reader);
         }  catch (FileNotFoundException e) {
             throw new RuntimeException("Properties file not found: " + propertiesFileName +
-                    "\nProperties files present in a root project directory: " + Arrays.toString(Files.listFilesWith(".properties")));
+                    "\nProperties files present in a root project directory: " + Arrays.toString(FileManagement.listFilesWith(".properties")));
         } catch (SecurityException | IOException e) {
             throw new RuntimeException("Error reading properties file: \n" +
                     e.getMessage() +

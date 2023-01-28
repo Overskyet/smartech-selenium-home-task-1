@@ -27,7 +27,7 @@ public class Highlighter {
         if (duration.compareTo(0L) > 0) {
             js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 2px solid red; border-style: dashed;");
 
-            Wait.wait(duration);
+            Wait.sleepFor(duration);
 
             js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
         }

@@ -1,9 +1,7 @@
 package helper.listeners;
 
 import ch.qos.logback.classic.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 import org.slf4j.LoggerFactory;
@@ -13,7 +11,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
-public final class DriverListener implements WebDriverListener {
+public class DriverListener implements WebDriverListener {
     private static final Logger logger = (Logger) LoggerFactory.getLogger("helper.listeners.DriverListener");
 
     public WebDriver getDecoratedWebDriver(WebDriver original) {

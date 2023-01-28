@@ -8,6 +8,13 @@
     </listeners>
 
     <test name="Smoke">
+
+        <groups>
+            <run>
+                <include name="Smoke" />
+            </run>
+        </groups>
+
         <classes>
             <class name="avtodispetcher.AvtodispetcherTest">
                 <methods>
@@ -18,6 +25,13 @@
     </test>
 
     <test name="Regression">
+
+        <groups>
+            <run>
+                <include name="Regression" />
+            </run>
+        </groups>
+
         <classes>
             <class name="avtodispetcher.AvtodispetcherTest">
                 <methods>
