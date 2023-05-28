@@ -42,16 +42,16 @@ public final class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        logger.info("Test has failed: " + result.getTestName());
-        try {
-            WebDriver driver = (WebDriver) result.getTestClass()
-                    .getRealClass()
-                    .getSuperclass()
-                    .getDeclaredMethod("getDriver")
-                    .invoke(null);
-            Screenshot.takeScreenshot(driver);
-        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
+//        logger.info("Test has failed: " + result.getTestName());
+//        try {
+//            WebDriver driver = (WebDriver) result.getTestClass()
+//                    .getRealClass()
+//                    .getSuperclass()
+//                    .getDeclaredMethod("getDriver")
+//                    .invoke(null);
+//            Screenshot.takeScreenshot(driver);
+//        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }

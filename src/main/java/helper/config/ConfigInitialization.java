@@ -26,6 +26,7 @@ class ConfigInitialization {
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
             properties.load(reader);
+            System.setProperty("webdriver.http.factory", "jdk-http-client");
         }  catch (FileNotFoundException e) {
             throw new RuntimeException("Properties file not found: " + propertiesFileName +
                     "\nProperties files present in a root project directory: " + Arrays.toString(FileManagement.listFilesWith(".properties")));
