@@ -19,6 +19,7 @@ public final class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         logger.info("Tests execution is starting... " + context.getName() + "\n" + context);
+        System.out.println("lorem ipsum blablabla TestListener is working!!!!!!!!!!!!!!!!!!!!");
     }
 
     @Override
@@ -27,6 +28,7 @@ public final class TestListener implements ITestListener {
                 + "\nPassed tests: " + context.getPassedTests()
                 + "\nFailed tests: " + context.getFailedTests()
                 + "\nSkipped tests: " + context.getSkippedTests());
+        System.out.println("lorem ipsum blablabla TestListener is working!!!!!!!!!!!!!!!!!!!!");
     }
 
     @Override
@@ -42,7 +44,7 @@ public final class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-//        logger.info("Test has failed: " + result.getTestName());
+        logger.info("Test has failed: " + result.getTestName());
 //        try {
 //            WebDriver driver = (WebDriver) result.getTestClass()
 //                    .getRealClass()
