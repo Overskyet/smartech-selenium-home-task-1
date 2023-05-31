@@ -2,9 +2,11 @@ package basetest;
 
 import helper.config.WebDrivers;
 import helper.listeners.DriverListener;
+import helper.listeners.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+@Listeners(TestListener.class)
 public abstract class BaseTest {
     private WebDriver driver;
 
