@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
@@ -23,11 +24,11 @@ public class FileManagement {
     }
 
     public static File saveScreenshot() throws IOException {
-        return new File(generatePath(getCurrentDateAndTimeWithSeconds(), ImageExtension.PNG));
+        return new File(generatePath(getCurrentUTCDateAndTimeWithSeconds(), ImageExtension.PNG));
     }
 
     private static String generatePath(String name, ImageExtension extension) throws IOException {
-        String folderName = getCurrentDateAndTimeWithoutSeconds() + "_Screenshots";
+        String folderName = getCurrentDate() + "_Screenshots";
         Path folderPath = Paths.get(".").normalize().toAbsolutePath().resolve(folderName);
         if (!Files.exists(folderPath)) {
             Files.createDirectory(folderPath);
@@ -49,10 +50,11 @@ public class FileManagement {
         return newPath;
     }
 
-    private static String getCurrentDateAndTimeWithoutSeconds() {
-        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'_'HH'_'mm'Z'").withZone(ZoneOffset.UTC));
+    private static String getCurrentDate() {
+//        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd").withZone(ZoneOffset.UTC));
+        return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
-    private static String getCurrentDateAndTimeWithSeconds() {
+    private static String getCurrentUTCDateAndTimeWithSeconds() {
         return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'_'HH'_'mm'_'ss'Z'").withZone(ZoneOffset.UTC));
     }
 }

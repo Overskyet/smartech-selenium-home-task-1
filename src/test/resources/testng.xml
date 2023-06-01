@@ -3,9 +3,9 @@
 
 <suite name="SmartechSeleniumHomeTask1" verbose="1">
 
-    <listeners>
-        <listener class-name="helper.listeners.TestListener"/>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="helper.listeners.TestListener"/>-->
+<!--    </listeners>-->
 
     <test name="Smoke">
 

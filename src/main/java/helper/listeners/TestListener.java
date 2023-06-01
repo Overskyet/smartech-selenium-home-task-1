@@ -19,7 +19,6 @@ public final class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         logger.info("Tests execution is starting... " + context.getName() + "\n" + context);
-        System.out.println("lorem ipsum blablabla TestListener is working!!!!!!!!!!!!!!!!!!!!");
     }
 
     @Override
@@ -39,21 +38,20 @@ public final class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         logger.info("Test execution was successful: " + result.getTestName());
-
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         logger.info("Test has failed: " + result.getTestName());
-//        try {
-//            WebDriver driver = (WebDriver) result.getTestClass()
-//                    .getRealClass()
-//                    .getSuperclass()
-//                    .getDeclaredMethod("getDriver")
-//                    .invoke(null);
-//            Screenshot.takeScreenshot(driver);
-//        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            WebDriver driver = (WebDriver) result.getTestClass()
+                    .getRealClass()
+                    .getSuperclass()
+                    .getDeclaredMethod("getDriver")
+                    .invoke(null);
+            Screenshot.takeScreenshot(driver);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
