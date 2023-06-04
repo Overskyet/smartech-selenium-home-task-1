@@ -8,6 +8,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import utils.Screenshot;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public final class TestListener implements ITestListener {
@@ -27,7 +28,6 @@ public final class TestListener implements ITestListener {
                 + "\nPassed tests: " + context.getPassedTests()
                 + "\nFailed tests: " + context.getFailedTests()
                 + "\nSkipped tests: " + context.getSkippedTests());
-        System.out.println("lorem ipsum blablabla TestListener is working!!!!!!!!!!!!!!!!!!!!");
     }
 
     @Override
@@ -43,15 +43,28 @@ public final class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         logger.info("Test has failed: " + result.getTestName());
-        try {
-            WebDriver driver = (WebDriver) result.getTestClass()
-                    .getRealClass()
-                    .getSuperclass()
-                    .getDeclaredMethod("getDriver")
-                    .invoke(null);
-            Screenshot.takeScreenshot(driver);
-        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
+
+        WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
+        Screenshot.takeScreenshot(driver);
+
+//        Object currentClass = result.getInstance();
+//        WebDriver driver = (WebDriver) currentClass.getDriver();
+
+
+//        try {
+//            Class<?> testClass = result.getTestClass().getRealClass();
+//
+//            Constructor<?> constructor = testClass.getDeclaredConstructor();
+//            constructor.setAccessible(true);
+//            Object testInstance = constructor.newInstance();
+//
+//            WebDriver driver = (WebDriver) testClass.getSuperclass()
+//                    .getDeclaredMethod("getDriver")
+//                    .invoke(testInstance);
+//
+//            Screenshot.takeScreenshot(driver);
+//        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException | InstantiationException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }

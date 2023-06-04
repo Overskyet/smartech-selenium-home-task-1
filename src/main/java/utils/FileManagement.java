@@ -55,6 +55,6 @@ public class FileManagement {
         return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
     private static String getCurrentUTCDateAndTimeWithSeconds() {
-        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'_'HH'_'mm'_'ss'Z'").withZone(ZoneOffset.UTC));
+        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH'_'mm'_'ss'Z'").withZone(ZoneOffset.UTC));
     }
 }

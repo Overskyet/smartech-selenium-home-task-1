@@ -8,11 +8,11 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Test listener has been added to the BaseTest class">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Screenshot on failure has been implemented">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FileManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/selenium-testng-maven-template-master",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/selenium-testng-maven-template-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="helper.exception" />
@@ -79,7 +79,7 @@
       <recent name="helper.basepage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AvtodispetcherTest.verifyUserIsAbleToCalculateDistanceAndFuelCost">
+  <component name="RunManager" selected="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult">
     <configuration name="AvtodispetcherTest.verifyAvtodispetcherPageIsAccessibleFromSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="smartech-selenium-home-task-1" />
       <extension name="coverage">
@@ -182,8 +182,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToCalculateDistanceAndFuelCost" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
+        <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToCalculateDistanceAndFuelCost" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToEditTheCalculatedRoute" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsAccessibleFromSearchResult" />
       </list>
@@ -462,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685576836901</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Screenshot on failure has been implemented">
+      <created>1685580667684</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1685580667684</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,9 +540,18 @@
     <MESSAGE value="Selenium switched to Java 11+ HTTP Client" />
     <MESSAGE value="Rolling logging added" />
     <MESSAGE value="Test listener has been added to the BaseTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test listener has been added to the BaseTest class" />
+    <MESSAGE value="Screenshot on failure has been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshot on failure has been implemented" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="elementText" />
