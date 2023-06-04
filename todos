@@ -4,3 +4,5 @@
 //TODO: Implement a Class that initializes log4j
 //TODO: Implement a Class that takes an original WebDriver, prepares WebDriverListener and returns decorated WebDriver
 //TODO: Externalise test data
+//TODO: Допилить логирование. Писать в текстовые логи ошибки из консоли
+/TODO: При создании скриншота фокусировать и выделять элемент, на котором произошла ошибка

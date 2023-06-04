@@ -51,7 +51,7 @@ public class AvtodispetcherTest extends BaseTest {
                 .addFuelPrice("46")
                 .submit();
 
-        Wait.sleepFor(10L);
+//        Wait.sleepFor(10L);
 
         result.editTheRoute();
 

@@ -8,11 +8,15 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Screenshot on failure has been implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Screenshot on failure added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/DriverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/DriverListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FileManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todos" beforeDir="false" afterPath="$PROJECT_DIR$/todos" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +83,7 @@
       <recent name="helper.basepage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult">
+  <component name="RunManager" selected="TestNG.AvtodispetcherTest.verifyUserIsAbleToCalculateDistanceAndFuelCost">
     <configuration name="AvtodispetcherTest.verifyAvtodispetcherPageIsAccessibleFromSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="smartech-selenium-home-task-1" />
       <extension name="coverage">
@@ -182,9 +186,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToCalculateDistanceAndFuelCost" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyUserIsAbleToEditTheCalculatedRoute" />
+        <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsDisplayedInSearchResult" />
         <item itemvalue="TestNG.AvtodispetcherTest.verifyAvtodispetcherPageIsAccessibleFromSearchResult" />
       </list>
     </recent_temporary>
@@ -469,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685580667684</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Screenshot on failure added">
+      <created>1685836817564</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1685836817564</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,7 +552,8 @@
     <MESSAGE value="Rolling logging added" />
     <MESSAGE value="Test listener has been added to the BaseTest class" />
     <MESSAGE value="Screenshot on failure has been implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Screenshot on failure has been implemented" />
+    <MESSAGE value="Screenshot on failure added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshot on failure added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

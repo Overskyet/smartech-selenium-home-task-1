@@ -45,7 +45,7 @@ public class DriverListener implements WebDriverListener {
     @Override
     public void afterFindElement(WebDriver driver, By locator, WebElement result) {
         logger.info("Found Element By: '" + locator.toString() + "'\n"
-        + "Element found: '" + result.toString() + "'");
+        + "Element found: '" + result.getAccessibleName() + "'");
     }
 
     @Override
@@ -61,44 +61,44 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void beforeClick(WebElement element) {
-        logger.info("Trying to click on: " + element.toString());
+        logger.info("Trying to click on: " + element.getAccessibleName());
     }
 
     @Override
     public void afterClick(WebElement element) {
-        logger.info("Clicked on: " + element.toString());
+        logger.info("Clicked on: " + element.getAccessibleName());
     }
 
     @Override
     public void beforeSendKeys(WebElement element, CharSequence... keysToSend) {
         logger.info("Trying to input: '" + Arrays.toString(keysToSend) + "'\n"
-        + "in the '" + element.toString() + "' field");
+        + "in the '" + element.getAccessibleName() + "' field");
     }
 
     @Override
     public void afterSendKeys(WebElement element, CharSequence... keysToSend) {
         logger.info("Entered: '" + Arrays.toString(keysToSend) + "'\n"
-                + "in the '" + element.toString() + "' field");
+                + "in the '" + element.getAccessibleName() + "' field");
     }
 
     @Override
     public void beforeClear(WebElement element) {
-        logger.info("Trying to clear the input field: '" + element.toString() + "'");
+        logger.info("Trying to clear the input field: '" + element.getAccessibleName() + "'");
     }
 
     @Override
     public void afterClear(WebElement element) {
-        logger.info("Cleared the input field: '" + element.toString() + "'");
+        logger.info("Cleared the input field: '" + element.getAccessibleName() + "'");
     }
 
     @Override
     public void beforeSubmit(WebElement element) {
-        logger.info("Trying to submit: '" + element.toString() + "'");
+        logger.info("Trying to submit: '" + element.getAccessibleName() + "'");
     }
 
     @Override
     public void afterSubmit(WebElement element) {
-        logger.info("Submitted: '" + element.toString() + "'");
+        logger.info("Submitted: '" + element.getAccessibleName() + "'");
     }
 
     @Override
@@ -118,7 +118,7 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void afterQuit(WebDriver driver) {
-        logger.info("The driver '" + driver.toString() + "' was quit");
+        logger.info("Quit the driver '" + driver.toString());
     }
 
 }

@@ -20,11 +20,12 @@ public class FileManagement {
 
     /** Save screenshot to the root project directory */
     public static File saveScreenshotAs(String name, ImageExtension extension) throws IOException {
-        return new File(generatePath(name, extension));
+        return new File(generatePath(name + "_" + getCurrentUTCDateAndTimeWithSeconds(), extension));
     }
 
-    public static File saveScreenshot() throws IOException {
-        return new File(generatePath(getCurrentUTCDateAndTimeWithSeconds(), ImageExtension.PNG));
+    /** Save screenshot to the root project directory */
+    public static File saveScreenshot(String name) throws IOException {
+        return new File(generatePath(name + "_" + getCurrentUTCDateAndTimeWithSeconds(), ImageExtension.PNG));
     }
 
     private static String generatePath(String name, ImageExtension extension) throws IOException {
@@ -51,10 +52,9 @@ public class FileManagement {
     }
 
     private static String getCurrentDate() {
-//        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd").withZone(ZoneOffset.UTC));
         return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
     private static String getCurrentUTCDateAndTimeWithSeconds() {
-        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH'_'mm'_'ss'Z'").withZone(ZoneOffset.UTC));
+        return OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'_'HH'_'mm'_'ss'Z'").withZone(ZoneOffset.UTC));
     }
 }
