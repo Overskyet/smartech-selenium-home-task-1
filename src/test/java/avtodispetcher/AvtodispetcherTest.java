@@ -7,7 +7,6 @@ import page.avtodispetcher.AvtodispetcherDistancePage;
 import page.avtodispetcher.AvtodispetcherResultPage;
 import page.yandex.YandexResultPage;
 import page.yandex.YandexSearchPage;
-import utils.Wait;
 
 public class AvtodispetcherTest extends BaseTest {
 
@@ -50,8 +49,6 @@ public class AvtodispetcherTest extends BaseTest {
                 .addFuelConsumption("9")
                 .addFuelPrice("46")
                 .submit();
-
-//        Wait.sleepFor(10L);
 
         result.editTheRoute();
 

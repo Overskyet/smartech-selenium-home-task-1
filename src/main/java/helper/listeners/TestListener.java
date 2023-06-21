@@ -3,6 +3,7 @@ package helper.listeners;
 import ch.qos.logback.classic.Logger;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.LoggerFactory;
+import org.testng.IResultMap;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -22,14 +23,14 @@ public final class TestListener implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         logger.info("Test execution is finished in... " + ((context.getEndDate().getTime() - context.getStartDate().getTime()) / 1000) + " s."
-                + "\nPassed tests: " + context.getPassedTests()
-                + "\nFailed tests: " + context.getFailedTests()
-                + "\nSkipped tests: " + context.getSkippedTests());
+                + "\nPassed tests: " + printOutTests(context.getPassedTests())
+                + "\nFailed tests: " + printOutTests(context.getFailedTests())
+                + "\nSkipped tests: " + printOutTests(context.getSkippedTests()));
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-        logger.info("Test execution starts: " + result.getMethod().getMethodName());
+        logger.info("Start executing test case: " + result.getMethod().getMethodName());
     }
 
     @Override
@@ -39,9 +40,23 @@ public final class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        logger.error("Test has failed: " + result.getMethod().getMethodName());
+        logger.error("Test failed: " + result.getMethod().getMethodName());
 
         WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
         Screenshot.takeScreenshotAs(driver, result.getMethod().getMethodName());
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        logger.info("Test skipped: " + result.getMethod().getMethodName());
+    }
+
+    private String printOutTests(IResultMap resultMap) {
+        StringBuilder result = new StringBuilder();
+        for (ITestResult entry : resultMap.getAllResults()) {
+            result.append("\n***\nMethod: ").append(entry.getMethod()).append('\n');
+            result.append("***\n");
+        }
+        return result.toString();
     }
 }

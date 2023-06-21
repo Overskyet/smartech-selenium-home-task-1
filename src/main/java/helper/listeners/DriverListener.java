@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
-public class DriverListener implements WebDriverListener {
+public final class DriverListener implements WebDriverListener {
     private static final Logger logger = (Logger) LoggerFactory.getLogger("helper.listeners.DriverListener");
 
     public WebDriver getDecoratedWebDriver(WebDriver original) {
@@ -34,18 +34,17 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void afterGet(WebDriver driver, String url) {
-        logger.info("Navigated to:'" + url + "'");
+        logger.info("Navigated to: '" + url + "'");
     }
 
     @Override
     public void beforeFindElement(WebDriver driver, By locator) {
-        logger.info("Trying to find Element By: '" + locator.toString() + "'");
+        logger.info("Trying to find Element by: '" + locator.toString() + "'");
     }
 
     @Override
     public void afterFindElement(WebDriver driver, By locator, WebElement result) {
-        logger.info("Found Element By: '" + locator.toString() + "'\n"
-        + "Element found: '" + result.getAccessibleName() + "'");
+        logger.info("Element found: '" + result.getAccessibleName() + "'");
     }
 
     @Override
@@ -55,8 +54,7 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void afterFindElements(WebDriver driver, By locator, List<WebElement> result) {
-        logger.info("Found Elements By: '" + locator.toString() + "'\n"
-                + "Elements found: '" + String.join(", ", (CharSequence) result) + "'");
+        logger.info("Elements found: '" + String.join(", ", (CharSequence) result) + "'");
     }
 
     @Override
@@ -108,7 +106,7 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void afterClose(WebDriver driver) {
-        logger.info("The driver '" + driver.toString() + "' was closed");
+        logger.info("The driver was closed");
     }
 
     @Override
@@ -118,7 +116,7 @@ public class DriverListener implements WebDriverListener {
 
     @Override
     public void afterQuit(WebDriver driver) {
-        logger.info("Quit the driver '" + driver.toString());
+        logger.info("Quit the driver");
     }
 
 }
