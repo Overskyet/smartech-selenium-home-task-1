@@ -1,6 +1,5 @@
 package utils;
 
-import helper.enums.ImageExtension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
