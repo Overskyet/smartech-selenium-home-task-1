@@ -1,5 +1,2 @@
-//TODO: Remove all OhjectRepo instances from Page classes
-//TODO: Implement a Class that initializes log4j
 //TODO: Externalise test data
 //TODO: Допилить логирование. Писать в текстовые логи ошибки из консоли
-/TODO: При создании скриншота фокусировать и выделять элемент, на котором произошла ошибка

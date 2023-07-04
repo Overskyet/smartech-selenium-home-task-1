@@ -8,9 +8,11 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Unused method split() deleted">
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/logging/MyLoggerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todos" beforeDir="false" afterPath="$PROJECT_DIR$/todos" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/selenium-testng-maven-template-master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/MyStoreProject",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="helper.exception" />
@@ -495,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687719273724</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Refactoring">
+      <created>1687719830930</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1687719830930</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,9 +576,9 @@
     <MESSAGE value="Test listener has been added to the BaseTest class" />
     <MESSAGE value="Screenshot on failure has been implemented" />
     <MESSAGE value="Screenshot on failure added" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Unused method split() deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unused method split() deleted" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
