@@ -1,0 +1,26 @@
+# Test: Сайт "Автодиспетчер" отображается в результатах поиска
+avtodispetcherPageIsDisplayedInSearch:
+  searchRequest: "расчет расстояний между городами"
+
+# Test: Сайт "Автодиспетчер" открывается по ссылке из результатов поиска
+avtodispetcherPageIsAccessibleFromSearch:
+  searchRequest: "расчет расстояний между городами"
+
+# Test: Пользователь может вычислить расстояние и стоимость топлива
+userIsAbleToCalculateDistanceAndFuelCost:
+  departureCity: "Тула"
+  destinationCity: "Санкт-Петербург"
+  fuelConsumption: 9
+  fuelPrice: 46
+  expectedTotalDistance: 897
+  expectedFuelCost: 3726
+
+# Test: Пользователь может изменить маршрут
+userIsAbleToEditTheCalculatedRoute:
+  departureCity: "Тула"
+  destinationCity: "Санкт-Петербург"
+  fuelConsumption: 9
+  fuelPrice: 46
+  transitCity: "Великий Новгород"
+  expectedTotalDistance: 966
+  expectedFuelCost: 4002

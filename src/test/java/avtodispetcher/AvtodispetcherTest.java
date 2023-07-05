@@ -11,7 +11,7 @@ import page.yandex.YandexSearchPage;
 public class AvtodispetcherTest extends BaseTest {
 
     @Test(priority = 1, groups = {"Smoke"})
-    public void avtodispIsDisplayedInSearch() {
+    public void avtodispetcherPageIsDisplayedInSearchResult() {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
 
@@ -19,7 +19,7 @@ public class AvtodispetcherTest extends BaseTest {
     }
 
     @Test(priority = 2, groups = {"Regression"})
-    public void avtodispIsAccessibleFromSearch() {
+    public void avtodispetcherPageIsAccessibleFromSearchResult() {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
         AvtodispetcherDistancePage distancePage = (AvtodispetcherDistancePage) yaResultPage.openAvtodispetcherPage();
@@ -28,7 +28,7 @@ public class AvtodispetcherTest extends BaseTest {
     }
 
     @Test(priority = 3, groups = {"Regression"})
-    public void calculateDistanceAndFuelCost() {
+    public void userIsAbleToCalculateDistanceAndFuelCost() {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
                 .addDepartureCity("Тула")
@@ -41,7 +41,7 @@ public class AvtodispetcherTest extends BaseTest {
     }
 
     @Test(priority = 3, groups = {"Regression"})
-    public void editTheCalculatedRoute() {
+    public void userIsAbleToEditTheCalculatedRoute() {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
                 .addDepartureCity("Тула")
