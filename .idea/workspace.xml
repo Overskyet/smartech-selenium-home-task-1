@@ -8,10 +8,12 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/TestData.yml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="YAML file with test data has been added">
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataProviders/DataProviders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,7 @@
       <recent name="helper.basepage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost">
+  <component name="RunManager" selected="TestNG.SampleTest">
     <configuration name="AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="smartech-selenium-home-task-1" />
       <extension name="coverage">
@@ -174,10 +176,10 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.SampleTest" />
+      <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
       <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsDisplayedInSearchResult" />
       <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost" />
       <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToEditTheCalculatedRoute" />
-      <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
     </list>
     <recent_temporary>
       <list>
@@ -517,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688519514819</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="YAML file with test data has been added">
+      <created>1688522693862</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1688522693862</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -592,7 +601,8 @@
     <MESSAGE value="Unused method split() deleted" />
     <MESSAGE value="Additional webdriver setup features have been added" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="YAML file with test data has been added" />
+    <option name="LAST_COMMIT_MESSAGE" value="YAML file with test data has been added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

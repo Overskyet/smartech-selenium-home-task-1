@@ -15,8 +15,9 @@ public abstract class BaseTest {
         return this.driver;
     }
 
+    @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
-    public void setup(ITestContext context) {
+    public void setup(ITestContext context, String browser) {
         driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
         context.setAttribute("webDriver", getDriver());
 

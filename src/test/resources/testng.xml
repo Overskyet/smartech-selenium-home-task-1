@@ -3,12 +3,8 @@
 
 <suite name="SmartechSeleniumHomeTask1" verbose="1">
 
-<!--    <listeners>-->
-<!--        <listener class-name="helper.listeners.TestListener"/>-->
-<!--    </listeners>-->
-
     <test name="Smoke">
-
+        <parameter name="browser" value="firefox"/> <!-- Available values for browser parameter: firefox, chrome (default), edge -->
         <groups>
             <run>
                 <include name="Smoke" />
@@ -25,7 +21,7 @@
     </test>
 
     <test name="Regression">
-
+        <parameter name="browser" value="firefox"/> <!-- Available values for browser parameter: firefox, chrome (default), edge -->
         <groups>
             <run>
                 <include name="Regression" />
