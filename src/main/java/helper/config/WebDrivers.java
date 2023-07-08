@@ -11,7 +11,6 @@ import java.util.Properties;
 
 public class WebDrivers {
     private Properties driversSettings;
-    private final static String WEB_DRIVER_PROPERTY = "webdriver";
     private final static String PAGE_LOAD_TIMEOUT_PROPERTY = "pageLoad.timeout";
 
     public WebDrivers() {
@@ -21,8 +20,8 @@ public class WebDrivers {
         setupDriverSettings(propertiesFileName);
     }
 
-    public WebDriver initWebDriver() {
-        return setupDriver();
+    public WebDriver initWebDriverFor(String browser) {
+        return setupDriver(browser);
     }
 
     private void setupDriversSettings() {
@@ -32,19 +31,18 @@ public class WebDrivers {
         driversSettings = new ConfigInitialization(fileName).setupProperties();
     }
 
-    private WebDriver setupDriver() {
-        String driverToUse = getProperty(WEB_DRIVER_PROPERTY);
+    private WebDriver setupDriver(String browser) {
         String pageLoadTimeout = getProperty(PAGE_LOAD_TIMEOUT_PROPERTY);
 
-        if (driverToUse == null || driverToUse.isBlank()) {
-            throw new IllegalArgumentException(String.format("Can not initialize new WebDriver instance" +
-                    "\nProperty key: '%s' does not exist" +
-                    "\nEnsure that the property key '%s' is in the properties file", WEB_DRIVER_PROPERTY, WEB_DRIVER_PROPERTY));
+        if (browser == null || browser.isBlank()) {
+            throw new IllegalArgumentException("Can not initialize new WebDriver instance" +
+                    "\nBrowser name is null or empty" +
+                    "\nEnsure that the value for 'browser' parameter is specified in the testNG configuration");
         }
 
         WebDriver driver;
 
-        switch (driverToUse) {
+        switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
@@ -57,8 +55,9 @@ public class WebDrivers {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
-            default: throw new IllegalArgumentException(String.format("Can not initialize new WebDriver instance, using provided parameter's value: %s" +
-                    "\nCheck the value of '%s' property key in the properties", driverToUse, WEB_DRIVER_PROPERTY));
+            default: throw new IllegalArgumentException(String.format("Can't initialize new WebDriver instance." +
+                    "\nCan't find WebDriver for the provided browser name: %s" +
+                    "\nCheck the browser name in the testNG configuration", browser));
         }
 
         driver.manage().window().maximize();

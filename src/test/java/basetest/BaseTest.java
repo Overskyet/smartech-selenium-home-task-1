@@ -18,7 +18,7 @@ public abstract class BaseTest {
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
     public void setup(ITestContext context, String browser) {
-        driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriver());
+        driver = new DriverListener().getDecoratedWebDriver(new WebDrivers().initWebDriverFor(browser));
         context.setAttribute("webDriver", getDriver());
 
 //         * Be able to pass the drivers through command line arguments

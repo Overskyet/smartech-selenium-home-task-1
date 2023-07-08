@@ -8,12 +8,9 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="YAML file with test data has been added">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dataProviders/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated">
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688522693862</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated">
+      <created>1688829599185</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1688829599185</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -578,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init commit" />
     <MESSAGE value="Logging added" />
     <MESSAGE value="Actions added" />
     <MESSAGE value="PageObjects initialized" />
@@ -602,7 +605,9 @@
     <MESSAGE value="Additional webdriver setup features have been added" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="YAML file with test data has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="YAML file with test data has been added" />
+    <MESSAGE value="browser param has been added to the testng config" />
+    <MESSAGE value="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
