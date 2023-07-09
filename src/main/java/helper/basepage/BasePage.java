@@ -3,10 +3,7 @@ package helper.basepage;
 import helper.browser.TabSwitcher;
 import helper.condition.ElementPresence;
 import helper.page.Highlighter;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -70,6 +67,10 @@ public class BasePage {
         return this.getDriver().getCurrentUrl();
     }
 
+    public boolean verifyCorrectPageIsOpened(String expectedUrl) {
+        return waitForPageLoadsExplicitly(expectedUrl, 10);
+    }
+
     public String getAttributeValue(By element, String attributeName) {
         return find(element).getAttribute(attributeName);
     }
@@ -78,18 +79,23 @@ public class BasePage {
         return !(getAttributeValue(element, attributeName).isBlank() || getAttributeValue(element, attributeName) == null);
     }
 
-    public void waitFor(By element, long seconds) {
-        new WebDriverWait(this.getDriver(), Duration.ofSeconds(seconds)).until(ExpectedConditions.presenceOfElementLocated(element));
-    }
     private WebElement waitForExplicitly(By element, long seconds) {
         return new WebDriverWait(this.getDriver(), Duration.ofSeconds(seconds)).ignoring(NoSuchElementException.class).until(ExpectedConditions.presenceOfElementLocated(element));
+    }
+
+    private boolean waitForPageLoadsExplicitly(String expectedUrl, long seconds) {
+        try {
+            return new WebDriverWait(this.getDriver(), Duration.ofSeconds(seconds)).until(ExpectedConditions.urlContains(expectedUrl));
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 
     public void hightlightElement(By element, Long duration) {
         new Highlighter(this.getDriver()).highlightElement(find(element), duration);
     }
 
-    public boolean textContains(By element, String text){
+    public boolean elementTextContains(By element, String text){
         String elementText = getText(element);
         return elementText.contains(text);
     }

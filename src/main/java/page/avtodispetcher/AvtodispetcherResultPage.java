@@ -27,7 +27,7 @@ public class AvtodispetcherResultPage extends BasePage {
     }
 
     public boolean resultsOfCalculationAre(String totalDistance, String fuelCost) {
-        return (super.getText(this.getTotalDistance()).equals(totalDistance) && super.textContains(this.getFuelCost(), fuelCost));
+        return (super.getText(this.getTotalDistance()).equals(totalDistance) && super.elementTextContains(this.getFuelCost(), fuelCost));
     }
 
     public void editTheRoute() {

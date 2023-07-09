@@ -51,7 +51,7 @@ public class AvtodispetcherDistancePage extends BasePage {
     }
 
     public boolean verifyAvtodispetcherPageIsOpened() {
-        return baseUrl.equals(getActualURL());
+        return verifyCorrectPageIsOpened(baseUrl);
     }
 
     public FormBuilder fillInTheForm() {

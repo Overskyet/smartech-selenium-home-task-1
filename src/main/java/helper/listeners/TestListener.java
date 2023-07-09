@@ -43,7 +43,8 @@ public final class TestListener implements ITestListener {
         logger.error("Test failed: " + result.getMethod().getMethodName());
 
         WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
-        Screenshot.takeScreenshotAs(driver, result.getMethod().getMethodName());
+        String browserName = result.getTestContext().getCurrentXmlTest().getParameter("browser");
+        Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
     }
 
     @Override

@@ -8,11 +8,12 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="WebDriver's initialization has been refactored.&#10;Now the browser name is fetched from TestNG config file">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng_smoke.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng_regression.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,17 +86,29 @@
   <component name="RunManager" selected="TestNG.SampleTest">
     <configuration name="AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="smartech-selenium-home-task-1" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="avtodispetcher.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="avtodispetcher" />
       <option name="MAIN_CLASS_NAME" value="avtodispetcher.AvtodispetcherTest" />
       <option name="METHOD_NAME" value="avtodispetcherPageIsAccessibleFromSearchResult" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties>
+        <property name="-DsuiteXmlFiles" value="testng_regression.xml" />
+      </properties>
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,10 +198,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
         <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsDisplayedInSearchResult" />
         <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost" />
         <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToEditTheCalculatedRoute" />
-        <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
       </list>
     </recent_temporary>
   </component>
@@ -542,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688830718431</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added">
+      <created>1688834435765</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1688834435765</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -594,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Actions added" />
     <MESSAGE value="PageObjects initialized" />
     <MESSAGE value="BaseTest class added&#10;Sample test scenarios added" />
     <MESSAGE value="New helper methods added" />
@@ -619,7 +638,8 @@
     <MESSAGE value="browser param has been added to the testng config" />
     <MESSAGE value="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated" />
     <MESSAGE value="WebDriver's initialization has been refactored.&#10;Now the browser name is fetched from TestNG config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="WebDriver's initialization has been refactored.&#10;Now the browser name is fetched from TestNG config file" />
+    <MESSAGE value="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
