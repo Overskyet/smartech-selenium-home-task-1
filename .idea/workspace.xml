@@ -8,9 +8,15 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor refactoring.&#10;&#10;Browser name will be displayed now in the screenshot-on-failure's name">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor refactoring.">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testData/TestData.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +61,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/src/test/resources/testng_regression.xml",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_smoke.xml",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -67,12 +73,13 @@
       <recent name="helper.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\testData" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1" />
-      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -169,7 +176,7 @@
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <extension name="coverage" per_test_coverage_enabled="false" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng_regression.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_smoke.xml" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -216,13 +223,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Actions added">
-      <created>1652145114034</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1652145114034</updated>
     </task>
     <task id="LOCAL-00003" summary="Logging added">
       <created>1652145301342</created>
@@ -560,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688913555612</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Minor refactoring.">
+      <created>1688914171086</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1688914171087</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,7 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BaseTest class added&#10;Sample test scenarios added" />
     <MESSAGE value="New helper methods added" />
     <MESSAGE value="Object Repository class updated" />
     <MESSAGE value="Locator for YandexSearchPage added" />
@@ -637,7 +643,8 @@
     <MESSAGE value="WebDriver's initialization has been refactored.&#10;Now the browser name is fetched from TestNG config file" />
     <MESSAGE value="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added" />
     <MESSAGE value="Minor refactoring.&#10;&#10;Browser name will be displayed now in the screenshot-on-failure's name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring.&#10;&#10;Browser name will be displayed now in the screenshot-on-failure's name" />
+    <MESSAGE value="Minor refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
