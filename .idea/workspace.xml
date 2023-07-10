@@ -8,15 +8,8 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Minor refactoring.">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added.">
       <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_regression.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_smoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testData/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,13 +216,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Logging added">
-      <created>1652145301342</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1652145301342</updated>
     </task>
     <task id="LOCAL-00004" summary="Actions added">
       <created>1652221991020</created>
@@ -567,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688914171087</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added.">
+      <created>1688999707081</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1688999707081</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -619,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New helper methods added" />
     <MESSAGE value="Object Repository class updated" />
     <MESSAGE value="Locator for YandexSearchPage added" />
     <MESSAGE value="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated" />
@@ -644,7 +636,8 @@
     <MESSAGE value="TestNG config file has been refactored.&#10;Two TestNG config files (smoke and regression) have been added" />
     <MESSAGE value="Minor refactoring.&#10;&#10;Browser name will be displayed now in the screenshot-on-failure's name" />
     <MESSAGE value="Minor refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring." />
+    <MESSAGE value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
