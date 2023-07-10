@@ -8,8 +8,9 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
+      <change beforePath="$PROJECT_DIR$/testng_regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_smoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_smoke.xml",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_regression.xml",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -169,7 +170,7 @@
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <extension name="coverage" per_test_coverage_enabled="false" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_smoke.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_regression.xml" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -216,13 +217,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Actions added">
-      <created>1652221991020</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1652221991020</updated>
     </task>
     <task id="LOCAL-00005" summary="PageObjects initialized">
       <created>1652222798694</created>
@@ -560,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688999707081</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Refactoring">
+      <created>1688999829292</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1688999829292</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -628,7 +629,6 @@
     <MESSAGE value="Screenshot on failure added" />
     <MESSAGE value="Unused method split() deleted" />
     <MESSAGE value="Additional webdriver setup features have been added" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="YAML file with test data has been added" />
     <MESSAGE value="browser param has been added to the testng config" />
     <MESSAGE value="Browser param has been added to the testng config.&#10;&#10;Config.properties has been updated" />
@@ -637,7 +637,8 @@
     <MESSAGE value="Minor refactoring.&#10;&#10;Browser name will be displayed now in the screenshot-on-failure's name" />
     <MESSAGE value="Minor refactoring." />
     <MESSAGE value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

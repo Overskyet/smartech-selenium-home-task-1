@@ -4,7 +4,7 @@
 <suite name="SmartechSeleniumHomeTask1" verbose="1">
 
     <test name="Smoke">
-        <parameter name="browser" value="firefox"/> <!-- Available values for browser parameter: firefox, chrome (default), edge -->
+        <parameter name="browser" value="firefox"/> <!-- Available values for browser parameter: firefox, chrome, edge -->
         <groups>
             <run>
                 <include name="Smoke" />
