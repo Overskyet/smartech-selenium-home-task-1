@@ -17,11 +17,11 @@
         </encoder>
     </appender>
 
-    <logger name="helper.listeners.DriverListener" level="DEBUG">
+    <logger name="com.overskyet.helper.listeners.DriverListener" level="DEBUG">
         <appender-ref ref="FILE" />
     </logger>
 
-    <logger name="helper.listeners.TestListener" level="DEBUG">
+    <logger name="com.overskyet.helper.listeners.TestListener" level="DEBUG">
         <appender-ref ref="FILE" />
     </logger>
 

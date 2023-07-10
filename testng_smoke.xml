@@ -12,7 +12,7 @@
         </groups>
 
         <classes>
-            <class name="avtodispetcher.AvtodispetcherTest">
+            <class name="com.overskyet.testcases.avtodispetcher.AvtodispetcherTest">
                 <methods>
                     <include name="verifyAvtodispetcherPageIsDisplayedInSearchResult"/>
                 </methods>

@@ -8,7 +8,37 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring. Project files have been moved to com.overskyet package">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/action/MouseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/action/MouseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/basepage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/basepage/PageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/basepage/PageFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/basepage/PageFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/browser/TabSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/browser/TabSwitcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/condition/ElementPresence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/condition/ElementPresence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/BasicSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/ConfigInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/config/ConfigInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/config/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/config/WebDrivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/config/WebDrivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/driver/DriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/driver/DriverSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/enums/ImageExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/enums/ImageExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/enums/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/enums/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/exception/PageClassNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/exception/PageClassNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/DriverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/DriverListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/page/Highlighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/page/Highlighter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/reporting/Reporter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherDistancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/page/avtodispetcher/AvtodispetcherDistancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/page/yandex/YandexResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/yandex/YandexSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/page/yandex/YandexSearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/Wait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataProviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/dataProviders/DataProviders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng_regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_regression.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_smoke.xml" afterDir="false" />
     </list>
@@ -71,6 +101,7 @@
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\main\java" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\src\test\resources" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1\testData" />
       <recent name="C:\Users\Overskyet\Desktop\Projects\java-proj\smartech-selenium-home-task-1" />
@@ -217,13 +248,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00005" summary="PageObjects initialized">
-      <created>1652222798694</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1652222798694</updated>
     </task>
     <task id="LOCAL-00006" summary="BaseTest class added&#10;Sample test scenarios added">
       <created>1652225476090</created>
@@ -561,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688999829292</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Refactoring">
+      <created>1689000277004</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1689000277004</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Object Repository class updated" />
     <MESSAGE value="Locator for YandexSearchPage added" />
     <MESSAGE value="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated" />
     <MESSAGE value="Minor fixes" />
@@ -638,7 +668,8 @@
     <MESSAGE value="Minor refactoring." />
     <MESSAGE value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Refactoring. Project files have been moved to com.overskyet package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring. Project files have been moved to com.overskyet package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
