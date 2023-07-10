@@ -11,7 +11,7 @@ import org.testng.ITestResult;
 
 public final class TestListener implements ITestListener {
 
-    private static final Logger logger = (Logger) LoggerFactory.getLogger("helper.listeners.TestListener");
+    private static final Logger logger = (Logger) LoggerFactory.getLogger("com.overskyet.helper.listeners.TestListener");
 
     public TestListener() {}
 

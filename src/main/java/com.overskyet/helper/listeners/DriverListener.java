@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public final class DriverListener implements WebDriverListener {
-    private static final Logger logger = (Logger) LoggerFactory.getLogger("helper.listeners.DriverListener");
+    private static final Logger logger = (Logger) LoggerFactory.getLogger("com.overskyet.helper.listeners.DriverListener");
 
     public WebDriver getDecoratedWebDriver(WebDriver original) {
         return new EventFiringDecorator<>(this).decorate(original);
