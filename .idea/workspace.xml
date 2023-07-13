@@ -8,13 +8,10 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="snakeyaml dependency has been added">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider.">
+      <change afterPath="$PROJECT_DIR$/testng_all.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/ReadYAMLData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/ReadYAMLData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/overskyet/dataProviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/dataProviders/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_regression.xml",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -222,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Object Repository class updated">
-      <created>1660170639318</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1660170639318</updated>
     </task>
     <task id="LOCAL-00011" summary="Locator for YandexSearchPage added">
       <created>1660262006744</created>
@@ -566,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689128136610</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider.">
+      <created>1689212501101</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1689212501101</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Minor fixes&#10;Refactoring" />
     <MESSAGE value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
@@ -643,7 +639,8 @@
     <MESSAGE value="Refactoring. Project files have been moved to com.overskyet package" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="snakeyaml dependency has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="snakeyaml dependency has been added" />
+    <MESSAGE value="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
