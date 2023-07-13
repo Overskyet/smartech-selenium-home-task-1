@@ -8,10 +8,10 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider.">
-      <change afterPath="$PROJECT_DIR$/testng_all.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="TestNG configuration to start a test execution for all tests has been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_smoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_regression.xml",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -84,89 +84,7 @@
       <recent name="helper.basepage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SampleTest">
-    <configuration name="AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="smartech-selenium-home-task-1" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="avtodispetcher.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="avtodispetcher" />
-      <option name="MAIN_CLASS_NAME" value="avtodispetcher.AvtodispetcherTest" />
-      <option name="METHOD_NAME" value="avtodispetcherPageIsAccessibleFromSearchResult" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties>
-        <property name="-DsuiteXmlFiles" value="testng_regression.xml" />
-      </properties>
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AvtodispetcherTest.avtodispetcherPageIsDisplayedInSearchResult" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="smartech-selenium-home-task-1" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="avtodispetcher" />
-      <option name="MAIN_CLASS_NAME" value="avtodispetcher.AvtodispetcherTest" />
-      <option name="METHOD_NAME" value="avtodispetcherPageIsDisplayedInSearchResult" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="smartech-selenium-home-task-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="avtodispetcher.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="avtodispetcher" />
-      <option name="MAIN_CLASS_NAME" value="avtodispetcher.AvtodispetcherTest" />
-      <option name="METHOD_NAME" value="userIsAbleToCalculateDistanceAndFuelCost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AvtodispetcherTest.userIsAbleToEditTheCalculatedRoute" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="smartech-selenium-home-task-1" />
-      <option name="PACKAGE_NAME" value="avtodispetcher" />
-      <option name="MAIN_CLASS_NAME" value="avtodispetcher.AvtodispetcherTest" />
-      <option name="METHOD_NAME" value="userIsAbleToEditTheCalculatedRoute" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="SampleTest" type="TestNG" singleton="false">
       <module name="smartech-selenium-home-task-1" />
       <shortenClasspath name="NONE" />
@@ -190,21 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="TestNG.SampleTest" />
-      <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
-      <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsDisplayedInSearchResult" />
-      <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost" />
-      <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToEditTheCalculatedRoute" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsAccessibleFromSearchResult" />
-        <item itemvalue="TestNG.AvtodispetcherTest.avtodispetcherPageIsDisplayedInSearchResult" />
-        <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToCalculateDistanceAndFuelCost" />
-        <item itemvalue="TestNG.AvtodispetcherTest.userIsAbleToEditTheCalculatedRoute" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SuitableConfigurationIdsCache">
@@ -219,13 +122,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Locator for YandexSearchPage added">
-      <created>1660262006744</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1660262006744</updated>
     </task>
     <task id="LOCAL-00012" summary="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated">
       <created>1661009845812</created>
@@ -563,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689212501101</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="TestNG configuration to start a test execution for all tests has been added.">
+      <created>1689270645689</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1689270645689</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fixes" />
     <MESSAGE value="Minor fixes&#10;Refactoring" />
     <MESSAGE value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
     <MESSAGE value="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added" />
@@ -640,7 +542,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="snakeyaml dependency has been added" />
     <MESSAGE value="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider." />
+    <MESSAGE value="TestNG configuration to start a test execution for all tests has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="TestNG configuration to start a test execution for all tests has been added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
