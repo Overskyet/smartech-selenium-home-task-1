@@ -8,10 +8,13 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/ReadYAMLData.java" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="snakeyaml dependency has been added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/ReadYAMLData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/ReadYAMLData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/overskyet/dataProviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/dataProviders/DataProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,13 +222,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Object Repository class updated">
-      <created>1660170252858</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1660170252858</updated>
     </task>
     <task id="LOCAL-00010" summary="Object Repository class updated">
       <created>1660170639318</created>
@@ -563,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689012703823</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="snakeyaml dependency has been added">
+      <created>1689128136610</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1689128136610</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Locator for YandexSearchPage added" />
     <MESSAGE value="Object Repository updated&#10;Added BaseUrl field to YandexSearchPage class&#10;SampleTest updated" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Minor fixes&#10;Refactoring" />
@@ -640,7 +642,8 @@
     <MESSAGE value="TestNG configs are now in the root project directory.&#10;Rules for test execution from the console have been added." />
     <MESSAGE value="Refactoring. Project files have been moved to com.overskyet package" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="snakeyaml dependency has been added" />
+    <option name="LAST_COMMIT_MESSAGE" value="snakeyaml dependency has been added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,7 @@
 package com.overskyet.testcases.avtodispetcher;
 
 import com.overskyet.basetest.BaseTest;
+import com.overskyet.dataProviders.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.overskyet.page.avtodispetcher.AvtodispetcherDistancePage;
@@ -8,54 +9,56 @@ import com.overskyet.page.avtodispetcher.AvtodispetcherResultPage;
 import com.overskyet.page.yandex.YandexResultPage;
 import com.overskyet.page.yandex.YandexSearchPage;
 
+import java.util.Map;
+
 public class AvtodispetcherTest extends BaseTest {
 
-    @Test(priority = 1, groups = {"Smoke"})
-    public void avtodispetcherPageIsDisplayedInSearchResult() {
+    @Test(priority = 1, groups = {"Smoke"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    public void avtodispetcherPageIsDisplayedInSearchResult(Map<String, Object> testData) {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
-        YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
+        YandexResultPage searchResult = (YandexResultPage) searchPage.searchFor((String) testData.get("searchRequest"));
 
         Assert.assertTrue(searchResult.verifyAvtodispetcherPageIsPresent(), "Avtodispetcher page is not present in search result");
     }
 
-    @Test(priority = 2, groups = {"Regression"})
-    public void avtodispetcherPageIsAccessibleFromSearchResult() {
+    @Test(priority = 2, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    public void avtodispetcherPageIsAccessibleFromSearchResult(Map<String, Object> testData) {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
-        YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor("расчет расстояний между городами");
+        YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor((String) testData.get("searchRequest"));
         AvtodispetcherDistancePage distancePage = (AvtodispetcherDistancePage) yaResultPage.openAvtodispetcherPage();
 
         Assert.assertTrue(distancePage.verifyAvtodispetcherPageIsOpened(), "The wrong page was opened. Expected to open Avtodispetcher page");
     }
 
-    @Test(priority = 3, groups = {"Regression"})
-    public void userIsAbleToCalculateDistanceAndFuelCost() {
+    @Test(priority = 3, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    public void userIsAbleToCalculateDistanceAndFuelCost(Map<String, Object> testData) {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
-                .addDepartureCity("Тула")
-                .addDestinationCity("Санкт-Петербург")
-                .addFuelConsumption("9")
-                .addFuelPrice("46")
+                .addDepartureCity((String) testData.get("departureCity"))
+                .addDestinationCity((String) testData.get("destinationCity"))
+                .addFuelConsumption((String) testData.get("fuelConsumption"))
+                .addFuelPrice((String) testData.get("fuelPrice"))
                 .submit();
 
-        Assert.assertTrue(result.resultsOfCalculationAre("897", "3726"), "Results of calculation are not correct, or element is not displayed");
+        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), "Results of calculation are not correct, or element is not displayed");
     }
 
-    @Test(priority = 3, groups = {"Regression"})
-    public void userIsAbleToEditTheCalculatedRoute() {
+    @Test(priority = 3, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    public void userIsAbleToEditTheCalculatedRoute(Map<String, Object> testData) {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
-                .addDepartureCity("Тула")
-                .addDestinationCity("Санкт-Петербург")
-                .addFuelConsumption("9")
-                .addFuelPrice("46")
+                .addDepartureCity((String) testData.get("departureCity"))
+                .addDestinationCity((String) testData.get("destinationCity"))
+                .addFuelConsumption((String) testData.get("fuelConsumption"))
+                .addFuelPrice((String) testData.get("fuelPrice"))
                 .submit();
 
         result.editTheRoute();
 
         result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
-                .addTransitCity("Великий Новгород")
+                .addTransitCity((String) testData.get("transitCity"))
                 .submit();
 
-        Assert.assertTrue(result.resultsOfCalculationAre("966", "4002"), "Results of calculation are not correct, or element is not displayed");
+        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), "Results of calculation are not correct, or element is not displayed");
     }
 }

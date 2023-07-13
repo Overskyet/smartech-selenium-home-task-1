@@ -3,6 +3,7 @@ package com.overskyet.utils;
 import com.overskyet.helper.enums.ImageExtension;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,6 +17,20 @@ public class FileManagement {
     /** Lists files under root project directory */
     public static File[] listFilesWith(String extension) {
         return new File(Paths.get(".").normalize().toAbsolutePath().toString()).listFiles((dir, name) -> name.endsWith(extension));
+    }
+
+    /** Returns string representation of file path under src/test/resources/testData project directory */
+    public static String getFilePathWithNameAndExtension(String fileName) throws FileNotFoundException {
+        Path basePath = Paths.get(".").normalize().toAbsolutePath();
+        File[] files = basePath.resolve("src/test/resources/testData")
+                .toFile()
+                .listFiles((dir, name) -> name.equals(fileName));
+
+        if (files != null && files.length > 0) {
+            return files[0].getPath();
+        }
+
+        throw new FileNotFoundException("File not found: " + fileName);
     }
 
     /** Saves screenshot to the root project directory */
