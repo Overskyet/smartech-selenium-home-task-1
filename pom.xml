@@ -37,6 +37,7 @@
                         <suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <reportsDirectory>${project.basedir}/output/reports</reportsDirectory>
                 </configuration>
             </plugin>
             <!-- Other plugins -->

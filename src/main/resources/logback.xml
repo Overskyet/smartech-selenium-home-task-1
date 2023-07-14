@@ -1,6 +1,6 @@
 <configuration>
     <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
-    <property name="APP_LOG_NAME" value="./ApplicationLog_%d{yyyy-MM-dd}.log" />
+    <property name="APP_LOG_NAME" value="./output/logs/ApplicationLog_%d{yyyy-MM-dd}.log" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>

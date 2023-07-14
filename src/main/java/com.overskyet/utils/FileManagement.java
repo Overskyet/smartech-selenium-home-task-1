@@ -44,12 +44,15 @@ public class FileManagement {
     }
 
     private static String generatePath(String name, ImageExtension extension) throws IOException {
-        String folderName = getCurrentDate() + "_Screenshots";
+        String folderName = "output";
+        String subfolderName = getCurrentDate() + "_Screenshots";
         Path folderPath = Paths.get(".").normalize().toAbsolutePath().resolve(folderName);
-        if (!Files.exists(folderPath)) {
-            Files.createDirectory(folderPath);
+        Path subfolderPath = folderPath.resolve(subfolderName);
+        if (!Files.exists(subfolderPath)) {
+            Files.createDirectories(subfolderPath);
         }
-        return folderPath.resolve(name + extension.toString()).toString();
+        String str = subfolderPath.resolve(name + extension.toString()).toString();
+        return subfolderPath.resolve(name + extension).toString();
     }
 
     private static String getCurrentDate() {

@@ -8,12 +8,11 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Screenshot on failure now is being passed to the surefire report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_regression.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Overskyet/Desktop/Projects/java-proj/smartech-selenium-home-task-1/testng_regression.xml",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="helper.exception" />
@@ -124,13 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Minor fixes">
-      <created>1661733315886</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1661733315886</updated>
     </task>
     <task id="LOCAL-00016" summary="Minor fixes">
       <created>1664723836641</created>
@@ -468,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689276032946</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Screenshot on failure now is being passed to the surefire report">
+      <created>1689305435282</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1689305435282</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,8 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fixes&#10;Refactoring" />
-    <MESSAGE value="Minor fixes&#10;Refactoring&#10;Overloaded constructor for the WebDrivers class has been added" />
     <MESSAGE value="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added" />
     <MESSAGE value="Logger has been added&#10;Refactoring" />
     <MESSAGE value="Test groups have been added" />
@@ -545,7 +542,9 @@
     <MESSAGE value="Test data have been externalised.&#10;Data Provider and helper method for loading data from YAML file have been added.&#10;Now test methods receive test data from the Map that's been passed from the data provider." />
     <MESSAGE value="TestNG configuration to start a test execution for all tests has been added." />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Screenshot on failure now passes to the surefire report" />
+    <MESSAGE value="Screenshot on failure now is being passed to the surefire report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshot on failure now is being passed to the surefire report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
