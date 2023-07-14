@@ -4,10 +4,9 @@ import ch.qos.logback.classic.Logger;
 import com.overskyet.utils.Screenshot;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.LoggerFactory;
-import org.testng.IResultMap;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.testng.*;
+
+import java.io.File;
 
 public final class TestListener implements ITestListener {
 
@@ -44,7 +43,9 @@ public final class TestListener implements ITestListener {
 
         WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
         String browserName = result.getTestContext().getCurrentXmlTest().getParameter("browser");
-        Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
+        File screenshot = Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
+
+        Reporter.log("<a href='"+ screenshot.getAbsolutePath() + "'> <img src='"+ screenshot.getAbsolutePath() + "' height='100' width='100'/> </a>");
     }
 
     @Override
