@@ -40,7 +40,7 @@ public class AvtodispetcherTest extends BaseTest {
                 .addFuelPrice((String) testData.get("fuelPrice"))
                 .submit();
 
-        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), "Results of calculation are not correct, or element is not displayed");
+        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), result.getActualCalculationResult());
     }
 
     @Test(priority = 3, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
@@ -59,6 +59,6 @@ public class AvtodispetcherTest extends BaseTest {
                 .addTransitCity((String) testData.get("transitCity"))
                 .submit();
 
-        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), "Results of calculation are not correct, or element is not displayed");
+        Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), result.getActualCalculationResult());
     }
 }

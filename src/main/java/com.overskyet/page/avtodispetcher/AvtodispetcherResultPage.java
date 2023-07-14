@@ -30,6 +30,10 @@ public class AvtodispetcherResultPage extends BasePage {
         return (super.getText(this.getTotalDistance()).equals(totalDistance) && super.elementTextContains(this.getFuelCost(), fuelCost));
     }
 
+    public String getActualCalculationResult() {
+        return String.format("\nActual total distance: %s.\nActual fuel cost: %s\n", super.getText(this.getTotalDistance()), super.getText(this.getFuelCost()));
+    }
+
     public void editTheRoute() {
         super.clickOn(getEditTheRouteLink());
     }
