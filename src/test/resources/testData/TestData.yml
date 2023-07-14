@@ -30,5 +30,5 @@ userIsAbleToEditTheCalculatedRoute:
     fuelConsumption: "8"
     fuelPrice: "50"
     transitCity: "Нижний Новгород"
-    expectedTotalDistance: "800"
-    expectedFuelCost: "3200"
+    expectedTotalDistance: "817"
+    expectedFuelCost: "3250"

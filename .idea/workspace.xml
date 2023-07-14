@@ -8,11 +8,9 @@
     <option name="SERVER_URL" value="http://localhost:8111" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Screenshot on failure now is being passed to the surefire report">
+    <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Refactoring. Test results (screenshots on failure, logs, report) are now located in the root project directory, within the output folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/utils/FileManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/TestData.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,13 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Minor fixes">
-      <created>1664723836641</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1664723836641</updated>
     </task>
     <task id="LOCAL-00017" summary="Minor fixes">
       <created>1670899954502</created>
@@ -467,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689305435282</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Refactoring. Test results (screenshots on failure, logs, report) are now located in the root project directory, within the output folder">
+      <created>1689346725197</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1689346725197</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring&#10;FormBuilder has been added&#10;Additional test methods has been added" />
     <MESSAGE value="Logger has been added&#10;Refactoring" />
     <MESSAGE value="Test groups have been added" />
     <MESSAGE value="Selenium switched to Java 11+ HTTP Client" />
@@ -544,7 +541,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Screenshot on failure now passes to the surefire report" />
     <MESSAGE value="Screenshot on failure now is being passed to the surefire report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Screenshot on failure now is being passed to the surefire report" />
+    <MESSAGE value="Refactoring. Test results (screenshots on failure, logs, report) are now located in the root project directory, within the output folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring. Test results (screenshots on failure, logs, report) are now located in the root project directory, within the output folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
