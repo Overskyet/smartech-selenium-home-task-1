@@ -10,8 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd3af36-5524-49e6-a09e-89319a28698a" name="Changes" comment="Assertions have been refactored. Now actual result displays in the resulting report.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/page/avtodispetcher/AvtodispetcherResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/page/avtodispetcher/AvtodispetcherResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overskyet/testcases/avtodispetcher/AvtodispetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.overskyet/helper/listeners/TestListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,13 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652139037147</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Minor fixes">
-      <created>1670900070972</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1670900070972</updated>
     </task>
     <task id="LOCAL-00019" summary="Minor fixes&#10;Refactoring">
       <created>1671074911239</created>
@@ -466,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689349564074</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Assertions have been refactored. Now actual result displays in the resulting report.">
+      <created>1689358427626</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1689358427626</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

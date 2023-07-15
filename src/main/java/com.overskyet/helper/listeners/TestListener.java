@@ -40,12 +40,8 @@ public final class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         logger.error("Test failed: " + result.getMethod().getMethodName());
+        shootScreenshotOnFailureAndAddItToReport(result);
 
-        WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
-        String browserName = result.getTestContext().getCurrentXmlTest().getParameter("browser");
-        File screenshot = Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
-
-        Reporter.log("<a href='"+ screenshot.getAbsolutePath() + "'> <img src='"+ screenshot.getAbsolutePath() + "' height='100' width='100'/> </a>");
     }
 
     @Override
@@ -60,5 +56,12 @@ public final class TestListener implements ITestListener {
             result.append("***\n");
         }
         return result.toString();
+    }
+    private void shootScreenshotOnFailureAndAddItToReport(ITestResult result) {
+        WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
+        String browserName = result.getTestContext().getCurrentXmlTest().getParameter("browser");
+        File screenshot = Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
+
+        Reporter.log("<a href='"+ screenshot.getAbsolutePath() + "'> <img src='"+ screenshot.getAbsolutePath() + "' height='100' width='100'/> </a>");
     }
 }
