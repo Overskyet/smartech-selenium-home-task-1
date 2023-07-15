@@ -12,7 +12,7 @@
         </groups>
 
         <classes>
-            <class name="com.overskyet.testcases.avtodispetcher.AvtodispetcherTest"/>
+            <class name="com.overskyet.testcases.avtodispetcher.AvtodispetcherTest" />
         </classes>
     </test>
 
