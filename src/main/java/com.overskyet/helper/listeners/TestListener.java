@@ -41,7 +41,6 @@ public final class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         logger.error("Test failed: " + result.getMethod().getMethodName());
         shootScreenshotOnFailureAndAddItToReport(result);
-
     }
 
     @Override
@@ -58,10 +57,18 @@ public final class TestListener implements ITestListener {
         return result.toString();
     }
     private void shootScreenshotOnFailureAndAddItToReport(ITestResult result) {
-        WebDriver driver = (WebDriver) result.getTestContext().getAttribute("webDriver");
-        String browserName = result.getTestContext().getCurrentXmlTest().getParameter("browser");
+        ITestContext context = result.getTestContext();
+        WebDriver driver = getWebDriverFromContext(context);
+        String browserName = getBrowserNameFromContext(context);
         File screenshot = Screenshot.takeScreenshotAs(driver, (browserName + "_" + result.getMethod().getMethodName()));
 
         Reporter.log("<a href='"+ screenshot.getAbsolutePath() + "'> <img src='"+ screenshot.getAbsolutePath() + "' height='100' width='100'/> </a>");
+    }
+
+    private WebDriver getWebDriverFromContext(ITestContext context) {
+        return (WebDriver) context.getAttribute("webDriver");
+    }
+    private String getBrowserNameFromContext(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("browser");
     }
 }

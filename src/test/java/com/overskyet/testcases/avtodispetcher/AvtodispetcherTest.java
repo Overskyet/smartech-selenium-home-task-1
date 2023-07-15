@@ -21,7 +21,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(searchResult.verifyAvtodispetcherPageIsPresent(), "Avtodispetcher page is not present in search result");
     }
 
-    @Test(priority = 2, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    @Test(priority = 2, groups = {"Regression"}, dependsOnGroups = {"Smoke"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
     public void avtodispetcherPageIsAccessibleFromSearchResult(Map<String, Object> testData) {
         YandexSearchPage searchPage = new YandexSearchPage(super.getDriver()).open();
         YandexResultPage yaResultPage = (YandexResultPage) searchPage.searchFor((String) testData.get("searchRequest"));
@@ -30,7 +30,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(distancePage.verifyAvtodispetcherPageIsOpened(), "The wrong page was opened. Expected to open Avtodispetcher page");
     }
 
-    @Test(priority = 3, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    @Test(priority = 3, groups = {"Regression"}, dependsOnGroups = {"Smoke"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
     public void userIsAbleToCalculateDistanceAndFuelCost(Map<String, Object> testData) {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
@@ -43,7 +43,7 @@ public class AvtodispetcherTest extends BaseTest {
         Assert.assertTrue(result.resultsOfCalculationAre((String) testData.get("expectedTotalDistance"), (String) testData.get("expectedFuelCost")), result.getActualCalculationResult());
     }
 
-    @Test(priority = 3, groups = {"Regression"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
+    @Test(priority = 3, groups = {"Regression"}, dependsOnGroups = {"Smoke"}, dataProviderClass = DataProviders.class, dataProvider = "ymlTestData")
     public void userIsAbleToEditTheCalculatedRoute(Map<String, Object> testData) {
         AvtodispetcherDistancePage distancePage = new AvtodispetcherDistancePage(super.getDriver()).open();
         AvtodispetcherResultPage result = (AvtodispetcherResultPage) distancePage.fillInTheForm()
